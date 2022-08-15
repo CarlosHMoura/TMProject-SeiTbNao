@@ -122,7 +122,7 @@ extern int g_nUpdateGuildName;
 extern char g_szEncryptedAcc[256];
 extern int g_bMoveServer;
 
-extern stCurse_num g_pCurseList;
+ 
 extern int g_bTestServer;
 
 extern int Game_grade;
