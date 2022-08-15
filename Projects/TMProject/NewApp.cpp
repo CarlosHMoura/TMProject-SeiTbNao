@@ -61,17 +61,6 @@ NewApp::~NewApp()
 	LOG_FINALIZELOG();
 }
 
-void InitServerName2()
-{
-	memset(g_szServerName, 0, sizeof(g_szServerName));
-	FILE* fpBin = nullptr;
-	fopen_s(&fpBin, ServerName2_Path, "rb");
-	if (fpBin)
-	{
-		fread(g_szServerName, sizeof(g_szServerName), 1u, fpBin);
-		fclose(fpBin);
-	}
-}
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -260,7 +249,6 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 
 	RenderDevice::m_nFontSize = _nFontSize;
 	RenderDevice::m_nFontTextureSize = 512;
-	InitServerName2();
 	InitServerName();
 
 	if (m_hWnd == nullptr)
