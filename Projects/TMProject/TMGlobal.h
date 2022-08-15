@@ -55,7 +55,7 @@ extern float g_ClipNear;
 extern float g_ClipFar;
 
 extern int g_nServerCountList[11];
-extern char g_szServerNameList[11][9];
+extern char g_szServerNameList[11][16];
 extern char g_szServerName[10][10][9];
 
 extern char g_UIString[500][64];

@@ -485,19 +485,29 @@ HRESULT NewApp::InitDevice()
 
 void NewApp::InitServerName()
 {
-	int nTempList[11];
+	
 	memset(g_szServerNameList, 0, sizeof(g_szServerNameList));
 	memset(g_nServerCountList, 0, sizeof(g_nServerCountList));
-	memset(nTempList, 0, sizeof(nTempList));
+	
+	FILE* fp = nullptr;
+	fopen_s(&fp, ServerName_Path, "rt");
 
-	FILE* fpBin = nullptr;
-	fopen_s(&fpBin, ServerName_Path, "rb");
-	if (fpBin)
+	if (fp == nullptr)
+		return;
+
+	char szTemp1[256];
+	for (int i = 0; i < 11 && fgets(szTemp1, 256, fp); ++i)
 	{
-		fread(g_szServerNameList, 1, sizeof(g_szServerNameList), fpBin);
-		fread(g_nServerCountList, 1, sizeof(g_nServerCountList), fpBin);
-		fclose(fpBin);
+		int ServerCount = 0;
+		char NameServer[16]{};
+
+		if (sscanf(szTemp1, "%d %s\n", &ServerCount ,NameServer) == -1)
+			break;
+
+		g_nServerCountList[i] = ServerCount;
+		strcpy_s(g_szServerNameList[i], NameServer);
 	}
+	fclose(fp);
 }
 
 void NewApp::InitMusicList()

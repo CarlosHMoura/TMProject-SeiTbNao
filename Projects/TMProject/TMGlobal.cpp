@@ -24,7 +24,7 @@ float g_ClipNear = 0.69f;
 float g_ClipFar = 540.0f;
 
 int g_nServerCountList[11];
-char g_szServerNameList[11][9];
+char g_szServerNameList[11][16];
 char g_szServerName[10][10][9];
 
 char g_UIString[500][64];
