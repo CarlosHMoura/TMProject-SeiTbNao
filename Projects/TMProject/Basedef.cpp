@@ -106,13 +106,9 @@ int BASE_InitializeAttribute()
     }
 
     fread(g_pAttribute, 1024, 1024, fp);
-    int tsum = 0;
-    fread(&tsum, 4, 1, fp);
     fclose(fp);
 
-    int sum = BASE_GetSum((char*)g_pAttribute, sizeof(g_pAttribute));
-
-    return sum == tsum;
+    return 1;
 }
 
 void BASE_ApplyAttribute(char* pHeight, int size)
@@ -146,50 +142,14 @@ int BASE_ReadItemList()
 
     char* temp = (char*)g_pItemList;
 
-    int tsum{};
-
     fread(g_pItemList, size, 1u, fp);
-    fread(&tsum, 4u, 1u, fp);
     fclose(fp);
 
     int sum = BASE_GetSum2((char*)g_pItemList, size); // Not being used...
 
-#if !defined _DEBUG
-    if (tsum != 0x1343B16)
-        return 0;
-#endif
-
     for (int i = 0; i < size; ++i)
         temp[i] ^= 0x5A;
 
-    int Handle = _open(".\\ExtraItem.bin", _O_RDONLY | _O_BINARY, 0);
-
-    if (Handle != -1)
-    {
-        char buff[256]{};
-
-        while (_read(Handle, buff, sizeof(STRUCT_ITEMLIST) + 2) >= sizeof(STRUCT_ITEMLIST) + 2)
-        {
-            short idx = *(short*)buff;
-
-            if (idx > 0 && idx < MAX_ITEMLIST)
-                memcpy(&g_pItemList[idx], &buff[2], sizeof(STRUCT_ITEMLIST));
-        }
-
-        _close(Handle);
-
-        for (int j = 0; j < size; ++j)
-            temp[j] ^= 0x5A;
-
-        sum = BASE_GetSum2((char*)g_pItemList, size); // Not being used...
-
-#if !defined _DEBUG
-        if (tsum != 0x1343B16)
-            return 0;
-#endif
-        for (int j = 0; j < size; ++j)
-            temp[j] ^= 0x5A;
-    }
     return 1;
 }
 
@@ -197,15 +157,12 @@ int BASE_ReadSkillBin()
 {
     int size = sizeof(STRUCT_SPELL) * MAX_SPELL_LIST;
     char* temp = (char*)g_pSpell;
-    int tsum = 0;
 
     FILE* fp = fopen(SkillData_Path, "rb");
 
     if (fp != NULL)
     {
         fread(g_pSpell, size, 1, fp);
-        fread(&tsum, sizeof(tsum), 1, fp);
-
         fclose(fp);
     }
     else
@@ -214,17 +171,8 @@ int BASE_ReadSkillBin()
         return FALSE;
     }
 
-    int sum = BASE_GetSum2((char*)g_pSpell, size);
-
-#ifndef _DEBUG
-    //if(SKILL_CHECKSUM != sum) 
-    //	return FALSE;
-#endif
-
     for (int i = 0; i < size; i++)
-    {
         temp[i] = temp[i] ^ 0x5A;
-    }
 
     return TRUE;
 }
@@ -353,11 +301,7 @@ int BASE_InitializeBaseDef()
 	ret = BASE_InitializeServerList() & 1;
     ret = BASE_ReadSkillBin() & ret;
     ret = BASE_ReadItemList() & ret;
-    ret = BASE_ReadInitItem() & ret;
     ret = BASE_InitializeAttribute() & ret;
-
-    BASE_InitialItemRePrice();
-
 	return ret;
 }
 
@@ -1443,32 +1387,6 @@ char* BASE_TransCurse(char* sz)
     if (sz == nullptr)
         return 0;
     
-    bool bFind = false;
-    do
-    {
-        bFind = false;
-        for (size_t i = 0; i < g_pCurseList.dnum; ++i)
-        {
-            if (strlen(g_pCurseList.pCurseList[i].szOriginal) == 0)
-                return sz;
-
-            char* szDest = strstr(sz, g_pCurseList.pCurseList[i].szOriginal);
-            if (szDest == nullptr)
-                continue;
-
-            int nOriLen = strlen(g_pCurseList.pCurseList[i].szOriginal);
-            if (!IsClearString2(sz, szDest - sz))
-                continue;
-
-            char szNext[128]{};
-            memcpy(szNext, sz, szDest - sz);
-            strcat(szNext, g_pCurseList.pCurseList[i].szTrans);
-            strcat(szNext, &szDest[nOriLen]);
-            sprintf(sz, szNext);
-            bFind = true;
-            break;
-        }
-    } while (bFind == true);
     return sz;
 }
 
