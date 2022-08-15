@@ -410,8 +410,11 @@ HRESULT NewApp::InitDevice()
 		if (nVolume < -2500)
 			nVolume = -2500;
 
-		m_pSoundManager->SetSoundVolume(nVolume);
-		m_pSoundManager->LoadSoundData();
+		if (m_pSoundManager)
+		{
+			m_pSoundManager->SetSoundVolume(nVolume);
+			m_pSoundManager->LoadSoundData();
+		}
 	}
 
 	if (m_nMusic > 0)
