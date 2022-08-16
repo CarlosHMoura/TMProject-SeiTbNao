@@ -20,6 +20,7 @@ int g_bDebugMsg = 1;
 int g_nReflection;
 char g_szFontName[128] = { "Tahoma" };
 int g_nFontBold = 500;
+int g_nLangIndex = 0;
 float g_ClipNear = 0.69f;
 float g_ClipFar = 540.0f;
 

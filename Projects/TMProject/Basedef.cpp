@@ -299,6 +299,7 @@ int BASE_InitializeBaseDef()
     ret = BASE_InitializeServerList() & 1;
     ret = BASE_ReadSkillBin() & ret;
     ret = BASE_ReadItemList() & ret;
+    ret = BASE_GetLanguage() & ret;
     ret = BASE_InitializeAttribute() & ret;
 	return ret;
 }
@@ -1291,6 +1292,26 @@ int BASE_InitializeServerList()
 	}
 
 	return 0;
+}
+
+
+int BASE_GetLanguage()
+{
+    FILE* fpFont = nullptr;
+    fopen_s(&fpFont, "Lang.txt", "rt");
+
+    if (fpFont != nullptr)
+    {
+        char szTemp[256]{};
+        fgets(szTemp, 256, fpFont);
+        sscanf(szTemp, "%d", &g_nLangIndex);
+        if (g_nFontBold < 0 || g_nLangIndex > 4)
+            g_nFontBold = 0;
+
+        fclose(fpFont);
+        return 1;
+    }
+    return 0;
 }
 
 int BASE_GetVillage(int x, int y)

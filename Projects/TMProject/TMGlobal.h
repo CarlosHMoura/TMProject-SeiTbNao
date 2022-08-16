@@ -51,6 +51,7 @@ extern int g_bDebugMsg;
 extern int g_nReflection;
 extern char g_szFontName[128];
 extern int g_nFontBold;
+extern int g_nLangIndex;
 extern float g_ClipNear;
 extern float g_ClipFar;
 
