@@ -715,7 +715,7 @@ void Exec_MSG_MessageWhisper(int conn, char *pMsg)
 			return;
 		}
 
-		int learn = pMob[conn].MOB.LearnedSkill[0];
+		int learn = pMob[conn].MOB.LearnedSkill;
 
 		if ((learn & 0x40000) == 0 && admin == 0)
 		{
@@ -858,7 +858,7 @@ void Exec_MSG_MessageWhisper(int conn, char *pMsg)
 
 		if (Class == 1)
 		{
-			int learn = pMob[conn].MOB.LearnedSkill[0];
+			int learn = pMob[conn].MOB.LearnedSkill;
 
 			if (learn & 0x40000)
 				summonmode = 2;

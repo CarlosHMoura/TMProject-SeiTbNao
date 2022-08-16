@@ -750,7 +750,7 @@ void ProcessDBMessage(char *Msg)
 
 										 memset(sm.Unk, 0, sizeof(sm.Unk));
 
-										 pMob[conn].MOB.BaseScore.Reserved = 0;
+										 pMob[conn].MOB.BaseScore.Merchant = 0;
 
 										 if (pMob[conn].extra.ClassMaster == ARCH && pMob[conn].extra.QuestInfo.Arch.MortalSlot >= 0 && pMob[conn].extra.QuestInfo.Arch.MortalSlot < 3)
 											 pMob[conn].extra.QuestInfo.Arch.MortalLevel = pUser[conn].SelChar.Score[pMob[conn].extra.QuestInfo.Arch.MortalSlot].Level - 299;
@@ -770,8 +770,8 @@ void ProcessDBMessage(char *Msg)
 										 pMob[conn].Mode = MOB_USER;
 
 										 sm.mob = pMob[conn].MOB;
-										 sm.mob.HomeTownX = sm.mob.HomeTownX;
-										 sm.mob.HomeTownY = sm.mob.HomeTownX;
+										 sm.mob.SPX = sm.mob.SPX;
+										 sm.mob.SPY = sm.mob.SPY;
 										 sm.Type = _MSG_CNFCharacterLogin;
 										
 										 if(NewbieEventServer == 1)
@@ -779,8 +779,8 @@ void ProcessDBMessage(char *Msg)
 										 else
 											sm.ID = ESCENE_FIELD;
 
-										 sm.PosX = sm.mob.HomeTownX;
-										 sm.PosY = sm.mob.HomeTownY;
+										 sm.PosX = sm.mob.SPX;
+										 sm.PosY = sm.mob.SPY;
 										 sm.ClientID = conn;
 										 sm.Weather = CurrentWeather;
 
@@ -789,8 +789,8 @@ void ProcessDBMessage(char *Msg)
 										
 
 										 pMob[conn].LastTime = CurrentTime;
-										 pMob[conn].LastX = pMob[conn].TargetX = sm.mob.HomeTownX;
-										 pMob[conn].LastY = pMob[conn].TargetY = sm.mob.HomeTownY;
+										 pMob[conn].LastX = pMob[conn].TargetX = sm.mob.SPX;
+										 pMob[conn].LastY = pMob[conn].TargetY = sm.mob.SPY;
 
 										 if (pMob[conn].MOB.Carry[KILL_MARK].sIndex == 0)
 										 {

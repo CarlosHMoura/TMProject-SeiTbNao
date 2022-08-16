@@ -48,8 +48,8 @@ extern int ServerGroup;
 extern unsigned int CurrentTime;
 extern int BrState;
 
-extern unsigned short g_pGuildWar[10000];
-extern unsigned short g_pGuildAlly[10000];
+extern unsigned short g_pGuildWar[65536];
+extern unsigned short g_pGuildAlly[65536];
 
 extern unsigned short pMobGrid  [MAX_GRIDY][MAX_GRIDX];
 extern unsigned short pItemGrid [MAX_GRIDY][MAX_GRIDX];
@@ -131,7 +131,7 @@ void  CloseUser(int conn);
 CMob *GetMobFromIndex(unsigned int index);
 int   GetAngle(int x, int y);
 int   GetLength(int x, int y);
-int   ReadMob(STRUCT_MOBNPC*mob, char *dir);
+int   ReadMob(STRUCT_MOB *mob, char *dir);
 void  DeleteMob(int conn, int Type);
 void  SaveUser(int conn,int Export);
 void  CharLogOut(int conn);
@@ -293,8 +293,8 @@ extern int LiveTower[3];
 
 extern int pChallangerMoney[6];
 
-extern unsigned short g_pGuildWar[10000];
-extern unsigned short g_pGuildAlly[10000];
+extern unsigned short g_pGuildWar[65536];
+extern unsigned short g_pGuildAlly[65536];
 
 extern unsigned short pMobGrid[MAX_GRIDY][MAX_GRIDX];
 extern unsigned short pItemGrid[MAX_GRIDY][MAX_GRIDX];

@@ -700,7 +700,7 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 			stAccountLogin.Header.ID = 0;
 			stAccountLogin.Header.Type = MSG_AccountLogin_Opcode;
 			stAccountLogin.DBNeedSave = 1;
-			stAccountLogin.ClientVersion = 769;
+			stAccountLogin.ClientVersion = 1758;
 			
 			DWORD dwSize = 0;
 			IP_ADAPTER_INFO stInfo{};

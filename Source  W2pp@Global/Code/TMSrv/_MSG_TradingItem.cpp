@@ -48,7 +48,7 @@ void Exec_MSG_TradingItem(int conn, char *pMsg)
 	}
 
 
-	if ((m->DestPlace == ITEM_PLACE_CARGO || m->SrcPlace == ITEM_PLACE_CARGO) && (pMob[conn].MOB.Class != 3 || !(pMob[conn].MOB.LearnedSkill[0] & 0x2000)))
+	if ((m->DestPlace == ITEM_PLACE_CARGO || m->SrcPlace == ITEM_PLACE_CARGO) && (pMob[conn].MOB.Class != 3 || !(pMob[conn].MOB.LearnedSkill & 0x2000)))
 	{
 		int WarpID = m->WarpID;
 

@@ -64,8 +64,8 @@ unsigned int pAdminIP[MAX_ADMIN] = {0,};
 int TransGuildConn[MAX_TRANS];
 int TransGuildIndex[MAX_TRANS];
 
-extern unsigned short g_pGuildWar[10000];
-extern unsigned short g_pGuildAlly[10000];
+extern unsigned short g_pGuildWar[65536];
+extern unsigned short g_pGuildAlly[65536];
 
 extern char g_pServerList[MAX_SERVERGROUP][MAX_SERVERNUMBER][64];
 
@@ -467,7 +467,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		g_pBaseSet[i].Rsv = 0;
 		memset(&g_pBaseSet[i].LearnedSkill, 0, 244);
 
-		memset(&g_pBaseSet[i].ShortSkill, -1, 0x4);
+		memset(&g_pBaseSet[i].SkillBar, -1, 0x4);
 	}
 #pragma endregion
 
@@ -1100,7 +1100,7 @@ LONG APIENTRY MainWndProc(HWND hWnd, UINT message, UINT wParam, LONG lParam)
 
 				cFileDB.SendDBSignalParm3(User, 0, _MSG_DBSetIndex, ServerIndex, Sapphire, User);
 
-				for(int i = 0; i < 10000; i++)
+				for(int i = 0; i < 65536; i++)
 				{
 					if(GuildInfo[i].Citizen)
 						cFileDB.SendGuildInfo(User, i);
@@ -1184,7 +1184,7 @@ LONG APIENTRY MainWndProc(HWND hWnd, UINT message, UINT wParam, LONG lParam)
 
 					memset(&g_pBaseSet[i].LearnedSkill, 0, 244);
 
-					memset(&g_pBaseSet[i].ShortSkill, -1, 0x4);
+					memset(&g_pBaseSet[i].SkillBar, -1, 0x4);
 				}
 #pragma endregion
 			} break;
@@ -1963,7 +1963,7 @@ void ProcessSecTimer()
 	}
 	if(when.tm_hour == 0 && when.tm_wday == 0 && when.tm_min == 0 && when.tm_sec == 0)
 	{
-		for(int i = 0; i < 10000;i++)
+		for(int i = 0; i < 65536;i++)
 		{
 			if(GuildInfo[i].Fame)
 			{

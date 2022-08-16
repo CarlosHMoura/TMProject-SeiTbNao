@@ -46,8 +46,8 @@ struct NPCGENLIST // 2988 total
 	int  RouteType;
 	int	 Offset;
 
-	STRUCT_MOBNPC   Leader;                    // 缚狼 技何 郴侩.
-	STRUCT_MOBNPC   Follower;                  // 妒付聪 技何郴侩
+	STRUCT_MOB   Leader;                    // 缚狼 技何 郴侩.
+	STRUCT_MOB   Follower;                  // 妒付聪 技何郴侩
 };
 
 struct MAPREGION
@@ -63,7 +63,7 @@ struct MAPREGION
 class CNPCSummon
 {	
 public:
-	STRUCT_MOBNPC Mob[MAX_SUMMONLIST];
+	STRUCT_MOB Mob[MAX_SUMMONLIST];
 
 public:
 

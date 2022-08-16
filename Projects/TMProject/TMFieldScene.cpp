@@ -18711,7 +18711,7 @@ int TMFieldScene::OnPacketCNFRemoveServer(MSG_CNFRemoveServer* pStd)
 		MSG_AccountLogin stAccountLogin{};
 		stAccountLogin.Header.ID = 0;
 		stAccountLogin.Header.Type = MSG_AccountLogin_Opcode;
-		stAccountLogin.ClientVersion = 769;
+		stAccountLogin.ClientVersion = 1758;
 		stAccountLogin.DBNeedSave = 1;
 
 		ULONG dwSize = 0;

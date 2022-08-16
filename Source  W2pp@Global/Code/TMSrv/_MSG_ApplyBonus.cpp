@@ -90,7 +90,7 @@ void Exec_MSG_ApplyBonus(int conn, char *pMsg)
 
 				int max_special = 200;
 
-				if((1 << 7) & pMob[conn].MOB.LearnedSkill[0] && m->Detail == 1 || (1 << 15) & pMob[conn].MOB.LearnedSkill[0] && m->Detail == 2 || (1 << 23) & pMob[conn].MOB.LearnedSkill[0] && m->Detail == 3)
+				if((1 << 7) & pMob[conn].MOB.LearnedSkill && m->Detail == 1 || (1 << 15) & pMob[conn].MOB.LearnedSkill && m->Detail == 2 || (1 << 23) & pMob[conn].MOB.LearnedSkill && m->Detail == 3)
 					max_special = 255;
 
 				if (pMob[conn].extra.ClassMaster == CELESTIAL || pMob[conn].extra.ClassMaster == CELESTIALCS || pMob[conn].extra.ClassMaster == SCELESTIAL)
@@ -150,7 +150,7 @@ void Exec_MSG_ApplyBonus(int conn, char *pMsg)
 
 						if(skillpos == 7 || skillpos == 15 || skillpos == 23)
 						{
-							if ((1 << 7) & pMob[conn].MOB.LearnedSkill[0] || (1 << 15) & pMob[conn].MOB.LearnedSkill[0] || (1 << 23) & pMob[conn].MOB.LearnedSkill[0])
+							if ((1 << 7) & pMob[conn].MOB.LearnedSkill || (1 << 15) & pMob[conn].MOB.LearnedSkill || (1 << 23) & pMob[conn].MOB.LearnedSkill)
 							{
 								SendClientMessage(conn, g_pMessageStringTable[_NN_Only_OneSkillLearn]);
 								return;
@@ -160,7 +160,7 @@ void Exec_MSG_ApplyBonus(int conn, char *pMsg)
 													
 							for(int i = 0; i < 8; i++)
 							{
-								if ((1 << (skillpos - i)) & pMob[conn].MOB.LearnedSkill[0])
+								if ((1 << (skillpos - i)) & pMob[conn].MOB.LearnedSkill)
 									skillin++;
 							}
 
@@ -180,7 +180,7 @@ void Exec_MSG_ApplyBonus(int conn, char *pMsg)
 							}
 						}
 
-						if ((1 << skillpos) & pMob[conn].MOB.LearnedSkill[0])
+						if ((1 << skillpos) & pMob[conn].MOB.LearnedSkill)
 						{
 							SendClientMessage(conn, g_pMessageStringTable[_NN_Already_Learned_It]);
 							return;
@@ -199,7 +199,7 @@ void Exec_MSG_ApplyBonus(int conn, char *pMsg)
 									if(skillpos == 7 || skillpos == 15 || skillpos == 23)
 										pMob[conn].MOB.Coin -= coin;
 
-									pMob[conn].MOB.LearnedSkill[0] |= learn;
+									pMob[conn].MOB.LearnedSkill |= learn;
 									pMob[conn].MOB.SkillBonus -= Skillbonus;
 									pMob[conn].GetCurrentScore(conn);
 									SendScore(conn);

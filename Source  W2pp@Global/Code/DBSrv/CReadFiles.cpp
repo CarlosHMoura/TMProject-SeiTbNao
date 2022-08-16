@@ -697,15 +697,8 @@ void CReadFiles::ReadGuildInfo()
 
 	if (handle == -1)
 	{
-		handle = _open(GUILD_INFO_PATH, _O_CREAT | _O_BINARY);
-		if (handle == -1)
-		{
-			MessageBoxA(hWndMain, "no GuildInfo file", "BOOTING ERROR", MB_OK);
-			return;
-		}
-		memset(GuildInfo, 0, sizeof(GuildInfo));
-		_write(handle, &GuildInfo[0], sizeof(GuildInfo));
-		_close(handle);
+		MessageBoxA(hWndMain, "no GuildInfo file", "BOOTING ERROR", MB_OK);
+
 		return;
 	}
 

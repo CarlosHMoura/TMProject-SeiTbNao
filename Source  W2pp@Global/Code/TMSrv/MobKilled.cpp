@@ -2077,7 +2077,7 @@ void MobKilled(int target, int conn, int PosX, int PosY)
 
 			int killed_guild = pMob[target].MOB.Guild;
 			int killer_guild = pMob[conn].MOB.Guild;
-			int max_guild = 10000;
+			int max_guild = 65536;
 
 			if (killed_guild > 0 && killed_guild < max_guild && killer_guild > 0 && killer_guild < max_guild
 				&& g_pGuildWar[killed_guild] == killer_guild && g_pGuildWar[killer_guild] == killed_guild)

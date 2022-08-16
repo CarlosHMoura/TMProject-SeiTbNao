@@ -84,8 +84,8 @@ extern unsigned int pAdminIP[MAX_ADMIN];
 extern int TransGuildConn[MAX_TRANS];
 extern int TransGuildIndex[MAX_TRANS];
 
-extern unsigned short g_pGuildWar[10000];
-extern unsigned short g_pGuildAlly[10000];
+extern unsigned short g_pGuildWar[65536];
+extern unsigned short g_pGuildAlly[65536];
 
 extern char g_pServerList[MAX_SERVERGROUP][MAX_SERVERNUMBER][64];
 

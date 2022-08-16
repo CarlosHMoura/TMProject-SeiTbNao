@@ -58,11 +58,39 @@ struct MSG_STANDARDPARM3
 	int Parm3;
 };
 
+struct STRUCT_SCORE
+{
+	short Level;
+	int Ac;
+	int Damage;
+	char Reserved;
+	char AttackRun;
+	int MaxHp;
+	int MaxMp;
+	int Hp;
+	int Mp;
+	short Str;
+	short Int;
+	short Dex;
+	short Con;
+	unsigned short Special[4];
+};
 
+union STRUCT_BONUSEFFECT
+{
+	struct
+	{
+		unsigned char cEffect;
+		unsigned char cValue;
+	};
+	short sValue;
+};
 
-
-
- 
+struct STRUCT_ITEM
+{
+	short sIndex;
+	STRUCT_BONUSEFFECT stEffect[3];
+};
 
 struct STRUCT_SELCHAR
 {
@@ -76,7 +104,44 @@ struct STRUCT_SELCHAR
 	long long Exp[4];
 };
 
+struct STRUCT_MOB
+{
+	char MobName[16];
+	char Clan;
+	char Merchant;
+	unsigned short Guild;
+	char Class;
+	char Rsv;
+	unsigned short Quest;
+	int Coin;
+	long long Exp;
+	unsigned short HomeTownX;
+	unsigned short HomeTownY;
+	STRUCT_SCORE BaseScore;
+	STRUCT_SCORE CurrentScore;
+	STRUCT_ITEM Equip[MAX_EQUIPITEM];
+	STRUCT_ITEM Carry[64];
+	unsigned int LearnedSkill[2];
+	short ScoreBonus;
+	short SpecialBonus;
+	short SkillBonus;
+	char Critical;
+	char SaveMana;
+	char ShortSkill[4];
+	char GuildLevel;
+	char Magic;
+	char RegenHP;
+	char RegenMP;
+	char Resist[4];
+	char dummy[212];
+	unsigned short CurrentKill;
+	unsigned short TotalKill;
 
+	bool HasSoulSkill() const
+	{
+		return this->LearnedSkill[0] & 0x40000000;
+	}
+};
 
 struct STRUCT_AFFECT
 {
@@ -859,10 +924,35 @@ struct MSG_MessageChat
 };
 
 constexpr auto MSG_UpdateScore_Opcode = 0x336;
-
+struct MSG_UpdateScore
+{
+	MSG_STANDARD Header;
+	STRUCT_SCORE Score;
+	char Critical;
+	char SaveMana;
+	unsigned short Affect[32];
+	unsigned short Guild;
+	unsigned short GuildLevel;
+	char Resist[4];
+	int ReqHp;
+	int ReqMp;
+	unsigned short Magic;
+	unsigned short Rsv;
+	char LearnedSkill;
+};
 
 constexpr auto MSG_UpdateEtc_Opcode = 0x337;
-
+struct MSG_UpdateEtc
+{
+	MSG_STANDARD Header;
+	int FakeExp;
+	long long Exp;
+	unsigned int LearnedSkill[2];
+	short ScoreBonus;
+	short SpecialBonus;
+	short SkillBonus;
+	int Coin;
+};
 
 constexpr auto MSG_MessagePanel_Opcode = 0x101;
 struct MSG_MessagePanel

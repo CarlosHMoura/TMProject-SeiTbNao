@@ -1682,7 +1682,7 @@ lbl_PST1:
 			{
 				int attackdex = pMob[index].MOB.CurrentScore.Dex / 5;
 
-				if (pMob[index].MOB.LearnedSkill[0] & 0x1000000)
+				if (pMob[index].MOB.LearnedSkill & 0x1000000)
 					attackdex += 100;
 
 				if (pMob[index].MOB.Rsv & 0x40)

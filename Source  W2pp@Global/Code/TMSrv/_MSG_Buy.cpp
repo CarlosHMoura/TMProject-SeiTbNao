@@ -132,7 +132,7 @@ LABEL_BUY1:
 		Price = 7 * Price / 10;
 	}
 
-	if (Price <= 1999999999 && !Desconto && pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill[0] & 0x800)
+	if (Price <= 1999999999 && !Desconto && pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill & 0x800)
 	{
 		int special = (pMob[conn].MOB.CurrentScore.Special[2] / 10) + 6;
 

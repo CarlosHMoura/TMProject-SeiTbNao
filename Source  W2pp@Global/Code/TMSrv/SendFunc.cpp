@@ -1158,16 +1158,16 @@ void SendScore(int conn)
 	MSG_UpdateScore sm_vus;
 	memset(&sm_vus, 0, sizeof(MSG_UpdateScore));
 
-	sm_vus.Header.Type = _MSG_UpdateScore;
+	sm_vus.Type = _MSG_UpdateScore;
 
 	if (conn < MAX_USER)
 	{
-		sm_vus.ReqHp = pMob[conn].MOB.CurrentScore.Hp;
-		sm_vus.ReqMp = pMob[conn].MOB.CurrentScore.Mp;
+		sm_vus.CurrHp = pMob[conn].MOB.CurrentScore.Hp;
+		sm_vus.CurrMp = pMob[conn].MOB.CurrentScore.Mp;
 	}
 
-	sm_vus.Header.Size = sizeof(MSG_UpdateScore);
-	sm_vus.Header.ID = conn;
+	sm_vus.Size = sizeof(MSG_UpdateScore);
+	sm_vus.ID = conn;
 
 	memcpy(&sm_vus.Score, &pMob[conn].MOB.CurrentScore, sizeof(STRUCT_SCORE));
 
@@ -1184,14 +1184,14 @@ void SendScore(int conn)
 	sm_vus.Resistencia.Trovao = pMob[conn].MOB.Resistencia.Trovao;
 
 
-	if (pMob[conn].MOB.LearnedSkill[0] & 0x80)
-		sm_vus.LearnedSkill = 1;
-	else if (pMob[conn].MOB.LearnedSkill[0] & 0x8000)
-		sm_vus.LearnedSkill = 2;
-	else if (pMob[conn].MOB.LearnedSkill[0] & 0x800000)
-		sm_vus.LearnedSkill = 3;
+	if (pMob[conn].MOB.LearnedSkill & 0x80)
+		sm_vus.LineageSkill = 1;
+	else if (pMob[conn].MOB.LearnedSkill & 0x8000)
+		sm_vus.LineageSkill = 2;
+	else if (pMob[conn].MOB.LearnedSkill & 0x800000)
+		sm_vus.LineageSkill = 3;
 	else
-	     sm_vus.LearnedSkill = 0;
+	     sm_vus.LineageSkill = 0;
  
 
 	sm_vus.Magic = pMob[conn].MOB.Magic;
@@ -1233,23 +1233,28 @@ void SendEtc(int conn)
 
 	memset(&sm, 0, sizeof(MSG_UpdateEtc));
 
-	sm.Header.Type = _MSG_UpdateEtc;
-	sm.Header.Size = sizeof(MSG_UpdateEtc);
+	sm.Type = _MSG_UpdateEtc;
+	sm.Size = sizeof(MSG_UpdateEtc);
 
-	sm.Header.ID = conn;
+	sm.ID = conn;
 
 	sm.Exp = pMob[conn].MOB.Exp;
 
 	sm.SpecialBonus = pMob[conn].MOB.SpecialBonus;
 
-	sm.LearnedSkill[0] = pMob[conn].MOB.LearnedSkill[0];
-	sm.LearnedSkill[1] = pMob[conn].MOB.LearnedSkill[1];
+	sm.Learn = pMob[conn].MOB.LearnedSkill;
+	sm.nLearn = pMob[conn].MOB.nLearnedSkill;
 
 	sm.ScoreBonus = pMob[conn].MOB.ScoreBonus;
 	sm.SkillBonus = pMob[conn].MOB.SkillBonus;
 
 	sm.Coin = pMob[conn].MOB.Coin;
- 
+
+	sm.Hold = pMob[conn].extra.Hold;
+	sm.Magic = pMob[conn].MOB.Magic;
+
+	memcpy(sm.Skillbar, pMob[conn].MOB.SkillBar, 4);
+
 	if (!pUser[conn].cSock.AddMessage((char*)&sm, sizeof(MSG_UpdateEtc)))
 		CloseUser(conn);
 }
@@ -1326,7 +1331,7 @@ void SendGuildList(int conn)
 	if (members == 0)
 		SendClientMessage(conn, g_pMessageStringTable[_NN_No_Guild_Members]);
 
-	int max_guild = 10000;
+	int max_guild = 65536;
 
 	if (pMob[conn].MOB.Guild <= 0 || pMob[conn].MOB.Guild >= max_guild)
 		return;
@@ -1440,7 +1445,7 @@ void SendShopList(int conn, int MobIndex, int ShopType)
 void SendWarInfo(int conn, int Clan)
 {
 	int Guild = 0;
-	int max_guild = 10000;
+	int max_guild = 65536;
 
 	if (pMob[conn].MOB.Guild <= 0 || pMob[conn].MOB.Guild >= max_guild)
 		pMob[conn].MOB.Guild = 0;
