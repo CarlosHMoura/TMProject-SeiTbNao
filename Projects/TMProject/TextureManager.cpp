@@ -445,7 +445,7 @@ int TextureManager::InitUITextureSetList()
 
 		m_UITextureSetList[nSetIndex].nCount = nItemCount;
 		m_UITextureSetList[nSetIndex].pTextureCoord = new ControlTextureCoord[nItemCount];
-
+		int CurIcon = 0;
 		for (int nCount = 0; nCount < nItemCount; ++nCount)
 		{
 			fscanf(fp, "%d,%d,%d,%d,%d,%d,%d\r\n",
@@ -466,12 +466,17 @@ int TextureManager::InitUITextureSetList()
 			//*(_DWORD*)(v8 + 853) = v47 + 100;
 			if (nSetIndex == 526)
 			{
-				int nStartX = 100 * (nCount % 100 % 10);
-				int nStartY = 100 * (nCount % 100 / 10);
+				if (CurIcon > 100)
+					CurIcon = 0;
+
+				int nStartX = 100 * (CurIcon % 100 % 10);
+				int nStartY = 100 * (CurIcon % 100 / 10);
 				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartX = nStartX;
 				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartY = nStartY;
 				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nWidth = nStartX + 100;
 				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nHeight = nStartY + 100;
+
+				CurIcon++;
 			}
 		}
 		
