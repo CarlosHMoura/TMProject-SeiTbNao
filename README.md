@@ -1,3 +1,17 @@
+# Objetivos
+- Fazer com que este projeto rode utilizando a base de arquivos do Client WYD Global/KR de Versão 7.69+
+
+# O que foi realizado
+- Alterado as Estruturas para ler os arquivos de forma correta
+- Alterado a forma em que o cliente le o arquivo sn.bin, sendo nescessário utilizar o bloco de notas para editar o mesmo.
+- Foi adicionado uma tool de conversão da itemlist
+- Foi adicionado o cliente base para o funcionamento do mesmo
+
+
+
+
+
+
 # TMProject
 
 Este projeto é baseado em uma descompilação do cliente do jogo With Your Destiny. 
