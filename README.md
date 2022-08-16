@@ -11,7 +11,8 @@
 - Foi adicionado os slots novos 16 e 17, deve ser alterado no servidor o MAX_EQUIP para 18
 - Foi adicionado algumas descompilações na pasta Descompilations
 - Deve se utilizar o visual studio 2022
-
+- Foi adicionado um release do servidor
+- Foi adicionado uma source do servidor ao projeto
 
 
 
