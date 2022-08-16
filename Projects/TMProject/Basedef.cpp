@@ -145,8 +145,6 @@ int BASE_ReadItemList()
     fread(g_pItemList, size, 1u, fp);
     fclose(fp);
 
-    int sum = BASE_GetSum2((char*)g_pItemList, size); // Not being used...
-
     for (int i = 0; i < size; ++i)
         temp[i] ^= 0x5A;
 
