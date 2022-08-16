@@ -258,9 +258,15 @@ struct STRUCT_ITEMLIST
 	STRUCT_STATICEFFECT stEffect[12];
 	int nPrice;
 	short nUnique;
-	short nPos;
+	short UNK_1;
+	int nPos;
 	short nExtra;
 	short nGrade;
+	int UNK_2;
+	short mType;
+	short mData;
+	short UNK_3;
+	short UNK_4;
 };
 
 struct STRUCT_EXT1
