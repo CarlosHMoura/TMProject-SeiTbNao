@@ -159,6 +159,12 @@ extern int g_nCombineMode;
 extern int g_nItemCount;
 extern int g_nSpringTree;
 
+const static char* g_pLangPatch[] = {
+    "Lang\\EN\\",
+    "Lang\\PL\\",
+    "Lang\\PT\\",
+    "Lang\\TK\\",
+};
 const static TMVector3 g_vecItemBillPos[28] = 
 {
     {0.398f, 5.7620001f, 0.70599997f},
