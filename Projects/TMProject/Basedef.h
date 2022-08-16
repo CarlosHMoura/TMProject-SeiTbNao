@@ -1,5 +1,5 @@
 #pragma once
-
+#define MAX_EQUIPITEM 18
 constexpr int MAX_CARGO = 128;
 constexpr auto MAX_CARRY = 64;
 constexpr auto MAX_VISIBLE_CARRY = MAX_CARRY - 4;
@@ -106,7 +106,7 @@ struct STRUCT_SELCHAR
 	unsigned short HomeTownY[4];
 	char MobName[4][16];
 	STRUCT_SCORE Score[4];
-	STRUCT_ITEM Equip[4][16];
+	STRUCT_ITEM Equip[4][MAX_EQUIPITEM];
 	unsigned short Guild[4];
 	int Coin[4];
 	long long Exp[4];
@@ -127,7 +127,7 @@ struct STRUCT_MOB
 	unsigned short HomeTownY;
 	STRUCT_SCORE BaseScore;
 	STRUCT_SCORE CurrentScore;
-	STRUCT_ITEM Equip[16];
+	STRUCT_ITEM Equip[MAX_EQUIPITEM];
 	STRUCT_ITEM Carry[64];
 	unsigned int LearnedSkill[2];
 	short ScoreBonus;
@@ -506,7 +506,7 @@ struct STRUCT_MOB_OLD
 	unsigned short HomeTownY;
 	STRUCT_SCORE_OLD BaseScore;
 	STRUCT_SCORE_OLD CurrentScore;
-	STRUCT_ITEM Equip[16];
+	STRUCT_ITEM Equip[MAX_EQUIPITEM];
 	STRUCT_ITEM Carry[64];
 	unsigned int LearnedSkill;
 	short ScoreBonus;
@@ -624,7 +624,7 @@ struct STRUCT_SELCHAR_OLD
 	unsigned short HomeTownY[4];
 	char MobName[4][16];
 	STRUCT_SCORE_OLD Score[4];
-	STRUCT_ITEM Equip[4][16];
+	STRUCT_ITEM Equip[4][MAX_EQUIPITEM];
 	unsigned short Guild[4];
 	int Coin[4];
 	unsigned int Exp[4];
@@ -893,8 +893,8 @@ constexpr auto MSG_UpdateEquip_Opcode = 0x36B;
 struct MSG_UpdateEquip
 {
 	MSG_STANDARD Header;
-	unsigned short sEquip[16];
-	char Equip2[16];
+	unsigned short sEquip[MAX_EQUIPITEM];
+	char Equip2[MAX_EQUIPITEM];
 };
 
 constexpr auto MSG_UpdateAffect_Opcode = 0x3B9;
@@ -1075,13 +1075,13 @@ struct MSG_CreateMob
 	short PosY;
 	unsigned short MobID;
 	char MobName[16];
-	unsigned short Equip[16];
+	unsigned short Equip[MAX_EQUIPITEM];
 	unsigned short Affect[32];
 	unsigned short Guild;
 	char GuildLevel;
 	STRUCT_SCORE Score;
 	unsigned short CreateType;
-	char Equip2[16];
+	char Equip2[MAX_EQUIPITEM];
 	char Nick[26];
 	char Server;
 };
@@ -1094,13 +1094,13 @@ struct MSG_CreateMobTrade
 	short PosY;
 	unsigned short MobID;
 	char MobName[16];
-	unsigned short Equip[16];
+	unsigned short Equip[MAX_EQUIPITEM];
 	unsigned short Affect[32];
 	unsigned short Guild;
 	char GuildLevel;
 	STRUCT_SCORE Score;
 	unsigned short CreateType;
-	char Equip2[16];
+	char Equip2[MAX_EQUIPITEM];
 	char Nick[26];
 	char Desc[24];
 	char Server;

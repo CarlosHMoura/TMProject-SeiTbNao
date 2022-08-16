@@ -2731,8 +2731,8 @@ int BASE_GetMobAbility(STRUCT_MOB* mob, char Type)
         return value;
     }
 
-    int nUnique[16]{};
-    for (int i = 0; i < 16; ++i)
+    int nUnique[MAX_EQUIPITEM]{};
+    for (int i = 0; i < MAX_EQUIPITEM; ++i)
     {
         if (!mob->Equip[i].sIndex && i == 7)
             continue;
@@ -2802,7 +2802,7 @@ int BASE_GetMobAbility(STRUCT_MOB* mob, char Type)
 int BASE_GetMaxAbility(STRUCT_MOB* mob, char Type)
 {
     int value = 0;
-    for (int i = 0; i < 16; ++i)
+    for (int i = 0; i < MAX_EQUIPITEM; ++i)
     {
         if (mob->Equip[i].sIndex)
         {

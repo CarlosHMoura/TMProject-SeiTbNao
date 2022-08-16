@@ -1644,6 +1644,19 @@ int TMFieldScene::InitializeScene()
 
 		m_pGridMantua->AddItem(new SGridControlItem(nullptr, pItemMantua, 0.0f, 0.0f), 0, 0);
 	}
+	if (pMobData->Equip[16].sIndex > 40)
+	{
+		STRUCT_ITEM* pItemDRing = new STRUCT_ITEM;
+		memcpy(pItemDRing, &pMobData->Equip[16], 8);
+
+		m_pGridNewSlot1->AddItem(new SGridControlItem(nullptr, pItemDRing, 0.0f, 0.0f), 0, 0);
+	}
+	if (pMobData->Equip[17].sIndex > 40)
+	{
+		STRUCT_ITEM* pItemMantua = new STRUCT_ITEM;
+		memcpy(pItemMantua, &pMobData->Equip[17], 8);
+		m_pGridNewSlot2->AddItem(new SGridControlItem(nullptr, pItemMantua, 0.0f, 0.0f), 0, 0);
+	}
 	if (pMobData->Equip[8].sIndex > 40)
 	{
 		STRUCT_ITEM* pItemRing = new STRUCT_ITEM;
@@ -17995,7 +18008,7 @@ int TMFieldScene::OnPacketCreateMob(MSG_STANDARD* pStd)
 		int len = strlen(pCreateMobTrade->Desc);
 		if (len > 0)
 		{
-			for (int i = 1; i < 16; ++i)
+			for (int i = 1; i < MAX_EQUIPITEM; ++i)
 			{
 				pCreateMob->Equip[i] &= 0xFFF;
 				pCreateMob->Equip2[i] = 0;
@@ -18925,7 +18938,7 @@ int TMFieldScene::OnPacketCNFDropItem(MSG_CNFDropItem* pMsg)
 	SGridControlItem* pGridItem = nullptr;
 	if (pMsg->SourType == 0)
 	{
-		SGridControl* pGridList[16]{};
+		SGridControl* pGridList[MAX_EQUIPITEM]{};
 		pGridList[0] = nullptr;
 		pGridList[1] = m_pGridHelm;
 		pGridList[2] = m_pGridCoat;
@@ -18942,7 +18955,8 @@ int TMFieldScene::OnPacketCNFDropItem(MSG_CNFDropItem* pMsg)
 		pGridList[13] = m_pGridEvent;
 		pGridList[14] = m_pGridDRing;
 		pGridList[15] = m_pGridMantua;
-
+		pGridList[16] = m_pGridNewSlot1;
+		pGridList[17] = m_pGridNewSlot2;
 		if (pGridList[pMsg->SourPos])
 			pGridItem = pGridList[pMsg->SourPos]->PickupItem(0, 0);
 
@@ -19114,7 +19128,7 @@ int TMFieldScene::OnPacketSwapItem(MSG_STANDARD* pStd)
 	SGridControlItem* pSrcItem = nullptr;
 	SGridControlItem* pDestItem = nullptr;
 
-	SGridControl* pGridSrc[16]{};
+	SGridControl* pGridSrc[MAX_EQUIPITEM]{};
 
 	if (!pSwapItem->SourType)
 	{
@@ -19134,6 +19148,8 @@ int TMFieldScene::OnPacketSwapItem(MSG_STANDARD* pStd)
 		pGridSrc[13] = m_pGridEvent;
 		pGridSrc[14] = m_pGridDRing;
 		pGridSrc[15] = m_pGridMantua;
+		pGridSrc[16] = m_pGridNewSlot1;
+		pGridSrc[17] = m_pGridNewSlot2;
 		pSrcGrid = pGridSrc[pSwapItem->SourPos];
 		pSrcItem = pSrcGrid->PickupItem(0, 0);
 
@@ -19152,7 +19168,7 @@ int TMFieldScene::OnPacketSwapItem(MSG_STANDARD* pStd)
 		memset(&g_pObjectManager->m_stItemCargo[pSwapItem->SourPos], 0, sizeof(STRUCT_ITEM));
 	}
 
-	SGridControl* pGridDest[16]{};
+	SGridControl* pGridDest[MAX_EQUIPITEM]{};
 	if (!pSwapItem->DestType)
 	{
 		pGridDest[0] = m_pGridInv;
@@ -19171,7 +19187,8 @@ int TMFieldScene::OnPacketSwapItem(MSG_STANDARD* pStd)
 		pGridDest[13] = m_pGridEvent;
 		pGridDest[14] = m_pGridDRing;
 		pGridDest[15] = m_pGridMantua;
-
+		pGridDest[16] = m_pGridNewSlot1;
+		pGridDest[17] = m_pGridNewSlot2;
 		pDestGrid = pGridDest[pSwapItem->DestPos];
 		pDestItem = pDestGrid->PickupItem(0, 0);
 
@@ -19577,7 +19594,7 @@ int TMFieldScene::OnPacketSell(MSG_STANDARD* pStd)
 
 		if (pSell->MyType == 0)
 		{
-			SGridControl* pGridDest[16]{};
+			SGridControl* pGridDest[MAX_EQUIPITEM]{};
 
 			pGridDest[0] = m_pGridInv;
 			pGridDest[1] = m_pGridHelm;
@@ -19595,6 +19612,8 @@ int TMFieldScene::OnPacketSell(MSG_STANDARD* pStd)
 			pGridDest[13] = m_pGridEvent;
 			pGridDest[14] = m_pGridDRing;
 			pGridDest[15] = m_pGridMantua;
+			pGridDest[16] = m_pGridNewSlot1;
+			pGridDest[17] = m_pGridNewSlot2;
 			pDestItem = pGridDest[pSell->MyPos]->PickupItem(0, 0);
 
 			int nPrice = 0;

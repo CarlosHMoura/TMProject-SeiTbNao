@@ -1224,6 +1224,10 @@ short SGridControl::CheckPos(TMEITEMTYPE eType)
 		return 14;
 	case TMEITEMTYPE::ITEMTYPE_MANTUA:
 		return 15;
+	case TMEITEMTYPE::ITEMTYPE_NEWSLOT1:
+		return 16;
+	case TMEITEMTYPE::ITEMTYPE_NEWSLOT2:
+		return 17;
 		break;
 	}
 
