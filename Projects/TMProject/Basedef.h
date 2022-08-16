@@ -328,6 +328,10 @@ struct STRUCT_SPELL
 	int AffectResist;
 	int Passive;
 	int ForceDamage;
+
+	int UNK_01;
+	int UNK_02;
+
 };
 
 struct STRUCT_INITITEM
