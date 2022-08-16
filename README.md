@@ -6,6 +6,7 @@
 - Alterado a forma em que o cliente le o arquivo sn.bin, sendo nescessário utilizar o bloco de notas para editar o mesmo.
 - Foi adicionado uma tool de conversão da itemlist
 - Foi adicionado o cliente base para o funcionamento do mesmo
+- Foi adicionado a leitura do Lang.txt
 - Deve se utilizar o visual studio 2022
 
 
