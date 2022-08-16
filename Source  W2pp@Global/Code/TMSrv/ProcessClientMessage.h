@@ -51,9 +51,9 @@ extern int ServerGroup;
 extern unsigned int CurrentTime;
 extern int BrState;
 
-extern unsigned short g_pGuildWar[65536];
-extern unsigned short g_pGuildAlly[65536];
-extern STRUCT_GUILDINFO GuildInfo[65536];
+extern unsigned short g_pGuildWar[10000];
+extern unsigned short g_pGuildAlly[10000];
+extern STRUCT_GUILDINFO GuildInfo[10000];
 
 extern unsigned short pMobGrid  [MAX_GRIDY][MAX_GRIDX];
 extern unsigned short pItemGrid [MAX_GRIDY][MAX_GRIDX];

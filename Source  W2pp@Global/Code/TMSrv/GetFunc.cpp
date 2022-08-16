@@ -1319,13 +1319,13 @@ void GetAttack(int mob, int target, MSG_AttackOne *sm)
 		int dis = BASE_GetDistance(pMob[mob].TargetX, pMob[mob].TargetY, pMob[target].TargetX, pMob[target].TargetY);
 		if (dis >= 3)
 		{
-			special = /*pMob[mob].MOB.BaseScore.Special[2]*/pMob[mob].MOB.SkillBar[2];
-			special2 = /*pMob[mob].MOB.BaseScore.Special[3] */ pMob[mob].MOB.SkillBar[3];
+			special = pMob[mob].MOB.BaseScore.Special[2];
+			special2 = pMob[mob].MOB.BaseScore.Special[3];
 		}
 		else
 		{
-			special = /*pMob[mob].MOB.BaseScore.Special[0]*/pMob[mob].MOB.SkillBar[0];
-			special2 = /*pMob[mob].MOB.BaseScore.Special[1]*/pMob[mob].MOB.SkillBar[1];
+			special = pMob[mob].MOB.BaseScore.Special[0];
+			special2 = pMob[mob].MOB.BaseScore.Special[1];
 		}
 
 		sm->Motion = 0;
@@ -1451,9 +1451,9 @@ void GetAttack(int mob, int target, MSG_AttackOne *sm)
 			}
 		}
 		int rand_ = rand() % 100;
-		if (pMob[mob].MOB.SkillBar[3] != 255 && rand_ >= 25 && rand_ <= 64)
+		if (pMob[mob].MOB.ShortSkill[3] != 255 && rand_ >= 25 && rand_ <= 64)
 		{
-			int skillb3 = pMob[mob].MOB.SkillBar[3];
+			int skillb3 = pMob[mob].MOB.ShortSkill[3];
 			
 			int insttype = g_pSpell[skillb3].InstanceType;
 			
@@ -1489,26 +1489,26 @@ void GetAttack(int mob, int target, MSG_AttackOne *sm)
 				}
 			}
 		}
-		if (pMob[mob].MOB.SkillBar[0] == 255 || rand_ < 0 || rand_ > 49)
+		if (pMob[mob].MOB.ShortSkill[0] == 255 || rand_ < 0 || rand_ > 49)
 		{
-			if (pMob[mob].MOB.SkillBar[1] == 255 || rand_ < 50 || rand_ > 84)
+			if (pMob[mob].MOB.ShortSkill[1] == 255 || rand_ < 50 || rand_ > 84)
 			{
-				if (pMob[mob].MOB.SkillBar[2] != 255 && rand_ >= 85 && rand_ <= 99)
+				if (pMob[mob].MOB.ShortSkill[2] != 255 && rand_ >= 85 && rand_ <= 99)
 				{
-					Resist = g_pSpell[pMob[mob].MOB.SkillBar[2]].InstanceType - 2;
-					sm->SkillIndex = pMob[mob].MOB.SkillBar[2];
+					Resist = g_pSpell[pMob[mob].MOB.ShortSkill[2]].InstanceType - 2;
+					sm->SkillIndex = pMob[mob].MOB.ShortSkill[2];
 				}
 			}
 			else
 			{
-				Resist = g_pSpell[pMob[mob].MOB.SkillBar[1]].InstanceType - 2;
-				sm->SkillIndex = pMob[mob].MOB.SkillBar[1];
+				Resist = g_pSpell[pMob[mob].MOB.ShortSkill[1]].InstanceType - 2;
+				sm->SkillIndex = pMob[mob].MOB.ShortSkill[1];
 			}
 		}
 		else
 		{
-			Resist = g_pSpell[pMob[mob].MOB.SkillBar[0]].InstanceType - 2;
-			sm->SkillIndex = pMob[mob].MOB.SkillBar[0];
+			Resist = g_pSpell[pMob[mob].MOB.ShortSkill[0]].InstanceType - 2;
+			sm->SkillIndex = pMob[mob].MOB.ShortSkill[0];
 		}
 	}
 
@@ -1571,7 +1571,7 @@ void GetAttack(int mob, int target, MSG_AttackOne *sm)
 	sm->Dam[0].Damage = fisdam;
 }
 
-void GetAttackArea(int mob, MSG_Attack *sm)
+void GetAttackArea(int mob, MSG_Attack* sm)
 {
 	sm->ID = ESCENE_FIELD;
 	sm->AttackerID = mob;
@@ -1584,16 +1584,16 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 	sm->DoubleCritical = 0;
 	sm->CurrentMp = -1;
 	sm->ReqMp = -1;
-	
 
-	for(int i = 0; i < MAX_TARGET; i++)
+
+	for (int i = 0; i < MAX_TARGET; i++)
 	{
 		sm->Dam[i].TargetID = 0;
 		sm->Dam[i].Damage = 0;
 
 		sm->Dam[i].TargetID = pMob[mob].EnemyList[i];
 
-		if(sm->Dam[i].TargetID < 0 || sm->Dam[i].TargetID >= MAX_MOB)
+		if (sm->Dam[i].TargetID < 0 || sm->Dam[i].TargetID >= MAX_MOB)
 			sm->Dam[i].TargetID = 0;
 	}
 	int Resist = -1;
@@ -1602,9 +1602,9 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 	sm->SkillIndex = -1;
 	sm->Motion = rand() % 3 + 4;
 
-	for(int i = 0; i < MAX_TARGET; i++)
+	for (int i = 0; i < MAX_TARGET; i++)
 	{
-		if(sm->Dam[i].TargetID == 0)
+		if (sm->Dam[i].TargetID == 0)
 			continue;
 
 		sm->TargetX = pMob[sm->Dam[i].TargetID].TargetX;
@@ -1618,13 +1618,13 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 			int dis = BASE_GetDistance(pMob[mob].TargetX, pMob[mob].TargetY, pMob[sm->Dam[i].TargetID].TargetX, pMob[sm->Dam[i].TargetID].TargetY);
 			if (dis >= 3)
 			{
-				special = /*pMob[mob].MOB.BaseScore.Special[2]*/pMob[mob].MOB.SkillBar[2];
-				special2 = /*pMob[mob].MOB.BaseScore.Special[3] */ pMob[mob].MOB.SkillBar[3];
+				special = pMob[mob].MOB.BaseScore.Special[2];
+				special2 = pMob[mob].MOB.BaseScore.Special[3];
 			}
 			else
 			{
-				special = /*pMob[mob].MOB.BaseScore.Special[0]*/pMob[mob].MOB.SkillBar[0];
-				special2 = /*pMob[mob].MOB.BaseScore.Special[1]*/pMob[mob].MOB.SkillBar[1];
+				special = pMob[mob].MOB.BaseScore.Special[0];
+				special2 = pMob[mob].MOB.BaseScore.Special[1];
 			}
 
 			sm->Motion = 0;
@@ -1685,7 +1685,7 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 					break;
 				case 6:
 					if (_rand > 1)
-						sm->Motion  += 2;
+						sm->Motion += 2;
 					else
 						sm->Motion++;
 					break;
@@ -1693,7 +1693,7 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 					if (_rand == 1)
 						sm->Motion++;
 					else
-						sm->Motion  += 2;
+						sm->Motion += 2;
 					break;
 				case 15:
 					switch (_rand)
@@ -1750,24 +1750,24 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 				}
 			}
 			int rand_ = rand() % 100;
-			if (pMob[mob].MOB.SkillBar[3] != 255 && rand_ >= 25 && rand_ <= 64)
+			if (pMob[mob].MOB.ShortSkill[3] != 255 && rand_ >= 25 && rand_ <= 64)
 			{
-				int skillb3 = pMob[mob].MOB.SkillBar[3];
-			
+				int skillb3 = pMob[mob].MOB.ShortSkill[3];
+
 				int insttype = g_pSpell[skillb3].InstanceType;
-			
+
 				int leader = pMob[mob].Leader;
 				if (leader <= 0)
 					leader = mob;
-			
+
 				int hp = pMob[mob].MOB.CurrentScore.Hp;
 				hp *= 10;
-				hp /= pMob[mob].MOB.CurrentScore.MaxHp+1;
-			
+				hp /= pMob[mob].MOB.CurrentScore.MaxHp + 1;
+
 				int lhp = pMob[leader].MOB.CurrentScore.Hp;
 				lhp *= 10;
-				lhp /= pMob[leader].MOB.CurrentScore.MaxHp+1;
-			
+				lhp /= pMob[leader].MOB.CurrentScore.MaxHp + 1;
+
 				if (insttype == 6)
 				{
 					if (hp <= 8 || lhp <= 8)
@@ -1783,40 +1783,40 @@ void GetAttackArea(int mob, MSG_Attack *sm)
 
 						sm->Dam[0].TargetID = _mob;
 						sm->Dam[0].Damage = pMob[_mob].MOB.CurrentScore.MaxHp / 10;
-					
+
 						return;
 					}
 				}
 			}
-			if (pMob[mob].MOB.SkillBar[0] == 255 || rand_ < 0 || rand_ > 49)
+			if (pMob[mob].MOB.ShortSkill[0] == 255 || rand_ < 0 || rand_ > 49)
 			{
-				if (pMob[mob].MOB.SkillBar[1] == 255 || rand_ < 50 || rand_ > 84)
+				if (pMob[mob].MOB.ShortSkill[1] == 255 || rand_ < 50 || rand_ > 84)
 				{
-					if (pMob[mob].MOB.SkillBar[2] != 255 && rand_ >= 85 && rand_ <= 99)
+					if (pMob[mob].MOB.ShortSkill[2] != 255 && rand_ >= 85 && rand_ <= 99)
 					{
-						Resist = g_pSpell[pMob[mob].MOB.SkillBar[2]].InstanceType - 2;
-						sm->SkillIndex = pMob[mob].MOB.SkillBar[2];
+						Resist = g_pSpell[pMob[mob].MOB.ShortSkill[2]].InstanceType - 2;
+						sm->SkillIndex = pMob[mob].MOB.ShortSkill[2];
 					}
 				}
 				else
 				{
-					Resist = g_pSpell[pMob[mob].MOB.SkillBar[1]].InstanceType - 2;
-					sm->SkillIndex = pMob[mob].MOB.SkillBar[1];
+					Resist = g_pSpell[pMob[mob].MOB.ShortSkill[1]].InstanceType - 2;
+					sm->SkillIndex = pMob[mob].MOB.ShortSkill[1];
 				}
 			}
 			else
 			{
-				Resist = g_pSpell[pMob[mob].MOB.SkillBar[0]].InstanceType - 2;
-				sm->SkillIndex = pMob[mob].MOB.SkillBar[0];
+				Resist = g_pSpell[pMob[mob].MOB.ShortSkill[0]].InstanceType - 2;
+				sm->SkillIndex = pMob[mob].MOB.ShortSkill[0];
 			}
 		}
 
 		int fisdam = pMob[mob].MOB.CurrentScore.Damage;
 		fisdam = BASE_GetDamage(fisdam, pMob[sm->Dam[i].TargetID].MOB.CurrentScore.Ac, 0);
-	
+
 		if (Resist >= 0 && Resist <= 3)
 			fisdam = (200 - pMob[sm->Dam[i].TargetID].MOB.Resist[Resist]) * fisdam / 100;
-	
+
 		if (fisdam > 0 && sm->Dam[i].TargetID < MAX_USER)
 		{
 			if (pMob[sm->Dam[i].TargetID].ReflectDamage > 0)

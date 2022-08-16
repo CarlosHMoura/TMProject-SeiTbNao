@@ -93,7 +93,7 @@ void Exec_MSG_Sell(int conn, char *pMsg)
 		return;
 					  
 
-	if (pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill & 0x1000)
+	if (pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill[0] & 0x1000)
 		goto LABEL_S1;
 
 	if (sTargetID < MAX_USER || sTargetID >= MAX_MOB)
@@ -151,7 +151,7 @@ LABEL_S1:
 	else
 		sPrice /= 2;
 
-	if (sPrice > 1000 && sIndex != 693 && sIndex != 694 && sIndex != 695 && pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill & 0x200)
+	if (sPrice > 1000 && sIndex != 693 && sIndex != 694 && sIndex != 695 && pMob[conn].MOB.Class == 3 && pMob[conn].MOB.LearnedSkill[0] & 0x200)
 	{
 		int special = pMob[conn].MOB.CurrentScore.Special[2];
 		special /= 10;

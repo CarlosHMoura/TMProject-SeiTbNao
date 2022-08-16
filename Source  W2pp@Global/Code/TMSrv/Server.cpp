@@ -351,9 +351,9 @@ int LiveTower[3];
 
 int pChallangerMoney[6];
 
-unsigned short g_pGuildWar[65536];
-unsigned short g_pGuildAlly[65536];
-STRUCT_GUILDINFO GuildInfo[65536];
+unsigned short g_pGuildWar[10000];
+unsigned short g_pGuildAlly[10000];
+STRUCT_GUILDINFO GuildInfo[10000];
 
 unsigned short pMobGrid[MAX_GRIDY][MAX_GRIDX];
 unsigned short pItemGrid[MAX_GRIDY][MAX_GRIDX];
@@ -2858,13 +2858,13 @@ int CreateMob(char *MobName, int PosX, int PosY, char *folder, int Type)
 
 	memset(&pMob[tmob].PartyList, 0, sizeof(pMob[tmob].PartyList));
 	
-	int read = ReadMob(&pMob[tmob].MOB, folder);
+	int read = ReadMob(reinterpret_cast<STRUCT_MOBNPC*>(&pMob[tmob].MOB), folder);
 
 	if(read == 0)
 		return 0;
 
 	pMob[tmob].MOB.MobName[NAME_LENGTH - 1] = 0;
-	pMob[tmob].MOB.BaseScore.Merchant = 0;
+	pMob[tmob].MOB.BaseScore.Reserved = 0;
 
 
 	for (int i = 0; i < NAME_LENGTH; i++)
@@ -3049,7 +3049,7 @@ void GenerateMob(int index, int PosX, int PosY)
 	memcpy(&pMob[tmob].MOB, &mNPCGen.pList[nindex].Leader, sizeof(STRUCT_MOB));
 
 	pMob[tmob].MOB.MobName[NAME_LENGTH - 1] = 0;
-	pMob[tmob].MOB.BaseScore.Merchant = 0;
+	pMob[tmob].MOB.BaseScore.Reserved = 0;
 
 	strncpy(pMob[tmob].MOB.MobName, mNPCGen.pList[nindex].Leader.MobName, NAME_LENGTH);
 
@@ -3226,7 +3226,7 @@ void GenerateMob(int index, int PosX, int PosY)
 
 		memcpy(&pMob[tempmob], &mNPCGen.pList[nindex].Follower, sizeof(STRUCT_MOB));
 
-		pMob[tempmob].MOB.BaseScore.Merchant = 0;
+		pMob[tempmob].MOB.BaseScore.Reserved = 0;
 
 		strncpy(pMob[tempmob].MOB.MobName, mNPCGen.pList[nindex].Follower.MobName, NAME_LENGTH);
 
@@ -4505,7 +4505,7 @@ LABEL_59:
 			AffectValue = 100;
 
 			if (idx >= MAX_USER)
-				AffectValue -= pMob[idx].MOB.LearnedSkill / MAX_USER;
+				AffectValue -= pMob[idx].MOB.LearnedSkill[0] / MAX_USER;
 
 			AffectValue /= 10;
 
@@ -4513,7 +4513,7 @@ LABEL_59:
 			int Perda = 1000;
 
 			if (idx >= MAX_USER)
-				Perda = 10 * (100 - pMob[idx].MOB.LearnedSkill / MAX_USER);
+				Perda = 10 * (100 - pMob[idx].MOB.LearnedSkill[0] / MAX_USER);
 
 			int Perdamax = Hp - Perda;
 
@@ -6782,8 +6782,9 @@ int  GetLength(int x, int y)
 	return out;
 }
 
-int  ReadMob(STRUCT_MOB *mob, char *dir)
+int  ReadMob(STRUCT_MOBNPC*mob, char *dir)
 {
+ 
 	sprintf(temp, "./%s/%s", dir, mob->MobName);
 
 	int Handle = _open(temp, O_RDONLY | O_BINARY);
@@ -6808,7 +6809,7 @@ int  ReadMob(STRUCT_MOB *mob, char *dir)
 
 	strncpy(temp, mob->MobName, NAME_LENGTH);
 
-	int ret = _read(Handle, mob, sizeof(STRUCT_MOB));
+	int ret = _read(Handle, mob, sizeof(STRUCT_MOBNPC));
 
 	if (ret == -1)
 	{
@@ -6940,8 +6941,8 @@ void CharLogOut(int conn)
 	SaveUser(conn, 1);
 	DeleteMob(conn, 2);
 
-	pMob[conn].TargetX = pMob[conn].MOB.SPX;
-	pMob[conn].TargetY = pMob[conn].MOB.SPY;
+	pMob[conn].TargetX = pMob[conn].MOB.HomeTownX;
+	pMob[conn].TargetY = pMob[conn].MOB.HomeTownY;
 	pMob[conn].Mode = 0;
 
 	SendClientSignal(conn, conn, _MSG_CNFCharacterLogout);
@@ -7380,8 +7381,8 @@ int UpdateItem(int Gate, int state, int *height)
 
 void DoRecall(int conn)
 {
-	int x = pMob[conn].MOB.SPX;
-	int y = pMob[conn].MOB.SPY;
+	int x = pMob[conn].MOB.HomeTownX;
+	int y = pMob[conn].MOB.HomeTownY;
 	int CityID = (pMob[conn].MOB.Merchant & 0xC0) >> 6;
 
 	x = rand() % 15 + g_pGuildZone[CityID].CitySpawnX;
@@ -7426,7 +7427,7 @@ void DoRecall(int conn)
 
 void DoWar(int myguild, int target)
 {
-	int max_guild = 65536;
+	int max_guild = 10000;
 
 	if (myguild <= 0 || target < 0 || myguild >= max_guild || target >= max_guild)
 	{
@@ -7519,7 +7520,7 @@ void DoWar(int myguild, int target)
 
 void DoAlly(int myguild, int target)
 {
-	int max_guild = 65536;
+	int max_guild = 10000;
 
 	if (myguild <= 0 || target < 0 || myguild >= max_guild || target >= max_guild)
 	{
@@ -8813,7 +8814,7 @@ void MobAttack(int attacker, MSG_Attack sm)
 		{
 			int attackdex = pMob[attacker].MOB.CurrentScore.Dex / 5;
 
-			if (pMob[attacker].MOB.LearnedSkill & 0x1000000)
+			if (pMob[attacker].MOB.LearnedSkill[0] & 0x1000000)
 				attackdex += 100;
 
 			if (pMob[attacker].MOB.Rsv & 0x40)

@@ -837,7 +837,7 @@ int BASE_GetBonusSkillPoint(STRUCT_MOB *mob, STRUCT_MOBEXTRA *extra)
 
 	for(int j = 0; j < MAX_SKILL; j++)
 	{
-		if((mob->LearnedSkill & skillbit) != 0)
+		if((mob->LearnedSkill[0] & skillbit) != 0)
 			spelluse += g_pSpell[((cls * MAX_SKILL) + j)].SkillPoint;
 
 		skillbit *= 2;
@@ -2384,7 +2384,7 @@ int BASE_GetMobAbility(STRUCT_MOB *mob, unsigned char Type)
 
 		if(value < 2 && cls == 3)
 		{
-			if((mob->LearnedSkill & 0x100000) != 0)
+			if((mob->LearnedSkill[0] & 0x100000) != 0)
                 value = 2;
 		}
 
@@ -2437,11 +2437,11 @@ int BASE_GetMobAbility(STRUCT_MOB *mob, unsigned char Type)
 					multi = 30;
 
 				//Pericia do caçador
-				if(mob->LearnedSkill & (1 << 10) && mob->Class == 3)
+				if(mob->LearnedSkill[0] & (1 << 10) && mob->Class == 3)
 					multi = 100;
 
 				//Mestre das Armas
-				if(mob->LearnedSkill & (1 << 9) && mob->Class == 0)
+				if(mob->LearnedSkill[0] & (1 << 9) && mob->Class == 0)
 					multi = 100;
 
 				if(ldam > rdam)
@@ -2944,8 +2944,8 @@ void BASE_ClearMob(STRUCT_MOB *mob)
 {
 	memset(mob, 0, sizeof(STRUCT_MOB));
 
-	mob->SPX = 2112;
-	mob->SPY = 2112;
+	mob->HomeTownX = 2112;
+	mob->HomeTownY = 2112;
 
 	memset(&mob->BaseScore, 0, sizeof(STRUCT_SCORE));
 	memset(&mob->CurrentScore, 0, sizeof(STRUCT_SCORE));
@@ -2956,10 +2956,10 @@ void BASE_ClearMob(STRUCT_MOB *mob)
 	for(int i = 0; i < MAX_CARRY; i++)
 		BASE_ClearItem(&mob->Carry[i]);
 
-	mob->SkillBar[0] = 0;
-	mob->SkillBar[1] = 0;
-	mob->SkillBar[2] = 0;
-	mob->SkillBar[3] = 0;
+	mob->ShortSkill[0] = 0;
+	mob->ShortSkill[1] = 0;
+	mob->ShortSkill[2] = 0;
+	mob->ShortSkill[3] = 0;
 }
 
 void BASE_ClearMobExtra(STRUCT_MOBEXTRA *extra)
@@ -3212,7 +3212,7 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 	if(MOB.Class == 0)
 	{
 		//Armadura Crítica
-		if(MOB.LearnedSkill & (1 << 15))
+		if(MOB.LearnedSkill[0] & (1 << 15))
 		{
 			MOB.CurrentScore.Ac = (int)(MOB.CurrentScore.Ac * 1.1f);
 
@@ -3345,7 +3345,7 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 
 			if(MOB.Class == 1)
 			{
-				if(MOB.LearnedSkill & 0x80000)
+				if(MOB.LearnedSkill[0] & 0x80000)
 				{
 					add *= 3;
 					DAMAGEMULTI += 10;
@@ -3441,9 +3441,9 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 			 int HpAdd = 0;
 			 int AcAdd = 0;
 			 int AttAdd = 0;
-			 int IsWolf = MOB.LearnedSkill & 0x20000;
-			 int IsBear = MOB.LearnedSkill & 0x80000;
-			 int IsAsta = MOB.LearnedSkill & 0x200000;
+			 int IsWolf = MOB.LearnedSkill[0] & 0x20000;
+			 int IsBear = MOB.LearnedSkill[0] & 0x80000;
+			 int IsAsta = MOB.LearnedSkill[0] & 0x200000;
 			 int RegAdd = 0;
 
 			 if(MOB.Equip[0].sIndex == 22 && IsWolf != 0)
@@ -3941,7 +3941,7 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 	if(MOB.Class == 3)
 	{
 		//Aggressividade
-		if(MOB.LearnedSkill & (1 << 2))
+		if(MOB.LearnedSkill[0] & (1 << 2))
 		{
 			int lidx = MOB.Equip[6].sIndex;
 
@@ -3958,12 +3958,12 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 		}
 
 		//Tempestade de Raios Bonus em Dano
-		if(MOB.LearnedSkill & (1 << 7))
+		if(MOB.LearnedSkill[0] & (1 << 7))
 			MOB.CurrentScore.Damage += special1 * 2;
 
 
 		//Visão do Caçador
-		if(MOB.LearnedSkill & (1 << 18))
+		if(MOB.LearnedSkill[0] & (1 << 18))
 		{
 			int criticaladd = ((special3+1)/10) + (MOB.CurrentScore.Dex / 75);
 			
@@ -3974,7 +3974,7 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 		}
 
 		//Proteção das sombras
-		if(MOB.LearnedSkill & (1 << 22))
+		if(MOB.LearnedSkill[0] & (1 << 22))
 		{
 			int sombraadd = (special3 / 3) + 10;
 			MOB.CurrentScore.Ac += sombraadd;
@@ -4019,7 +4019,7 @@ void BASE_GetCurrentScore(STRUCT_MOB & MOB, STRUCT_AFFECT *Affect, STRUCT_MOBEXT
 
 	MOB.RegenMP = RegenMP;
 
-	MOB.CurrentScore.Merchant = (MOB.CurrentScore.Merchant & 240) | MOB.Merchant;
+	MOB.CurrentScore.Reserved = (MOB.CurrentScore.Reserved & 240) | MOB.Merchant;
 
 	Att += AttackSpeedBonus + MOB.CurrentScore.Dex / 5;
 	Run += RunSpeedBonus;

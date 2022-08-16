@@ -39,7 +39,7 @@
 #define IDC_SHUTDOWNNP 9050
 
 
-#define		APP_VERSION				6975
+#define		APP_VERSION				769
 
 #define		GAME_PORT				8281	  // Game server listening port, client connects to it
 #define		DB_PORT					7514      // DB server listening port, Game server connects to it
@@ -396,223 +396,9 @@
 
 #pragma region Structures
 
-struct STRUCT_ITEM
-{
-	short sIndex;
-	union
-	{
-		short sValue;
-
-		struct
-		{
-			unsigned char cEffect;
-			unsigned char cValue;
-		};
-
-	}stEffect[3];
-
-
-	bool EquipCostume()
-	{
-		//Trajes communs
-		if (this->sIndex >= 4150 && this->sIndex <= 4189)
-			return true;
-
-		//Trajes novos
-		if (this->sIndex >= 4300 && this->sIndex < 4899)
-			return true;
-
-		return false;
-	}
-	int GetTimePet(int DefaultValue = 30)
-	{
-		//3 Dias
-		if (this->sIndex >= 3980 && this->sIndex <= 3982)
-			return 3;
-		//15 Dias
-		else if (this->sIndex >= 3983 && this->sIndex <= 3985)
-			return 15;
-		//30 Dias
-		else if (this->sIndex >= 3986 && this->sIndex <= 3989)
-			return 30;
-
-		//Other
-		return DefaultValue;
-	}
-	bool EsferaPet()
-	{
-		//Esferas communs
-		if (this->sIndex >= 3980 && this->sIndex <= 3994)
-			return true;
-
-		//Esferas novos
-		if (this->sIndex >= 3995 && this->sIndex < 3999)
-			return true;
-
-		return false;
-	}
-	unsigned char getSancValue()
-	{
-		if (this->sIndex >= 2360 && this->sIndex <= 2389)
-			return this->stEffect[2].cValue;
-
-		if (this->stEffect[0].cEffect == 43)
-			return this->stEffect[0].cValue;
-		else if (this->stEffect[1].cEffect == 43)
-			return this->stEffect[1].cValue;
-		else if (this->stEffect[2].cEffect == 43)
-			return this->stEffect[2].cValue;
-
-		else if (this->stEffect[0].cEffect >= 116 && this->stEffect[0].cEffect <= 125)
-			return this->stEffect[0].cValue;
-
-		else if (this->stEffect[1].cEffect >= 116 && this->stEffect[1].cEffect <= 125)
-			return this->stEffect[1].cValue;
-
-		else if (this->stEffect[2].cEffect >= 116 && this->stEffect[2].cEffect <= 125)
-			return this->stEffect[2].cValue;
-
-		else
-			return 0;
-	}
-};
- 
-struct STRUCT_SCORE
-{
-	int Level;     // The mob's level
-	int Ac;         // The mob's defense
-	int Damage;   // The mob's damage force
-
-	union
-	{
-		unsigned char Merchant; // UNK
-
-		struct
-		{
-			unsigned char Type : 4;
-			unsigned char Direction : 4;
-		};
-	};
-
-	union
-	{
-		unsigned char  AttackRun; // The mob's speed
-
-		struct
-		{
-			unsigned char Speed : 4;
-			unsigned char Attack : 4;
-		};
-	};
-
-	unsigned char  RegenHP;
-	unsigned char  RegenMP;
-
-	int MaxHp;     // The max HP the mob can have
-	int MaxMp;      // The max MP the mob can have
-	int Hp;          // The current HP of the mob
-	int Mp;          // The current MP of the mob
-
-	unsigned short           Str;          // The mob's strength points, affects it's attack power
-	unsigned short           Int;          // The mob's intelligence points, affects it's skill attack powers and MP
-	unsigned short           Dex;          // The mob's dexterity points, affects it's attack speed
-	unsigned short           Con;       // The mob's constitution points, affects it's HP
-
-	unsigned short  Special[4]; // The mob's special points, affects it's skill tiers
-};
-
-struct STRUCT_MOB
-{
-	union
-	{
-		char MobName[16];
-		struct
-		{
-			char PlayerName[12];
-			BYTE ChaosPoints;
-			BYTE CurrentKill;
-			short TotalKill;
-		};
-	};
- 
-	char Clan;
-
-	union
-	{
-		unsigned char Merchant;
-		struct
-		{
-			unsigned char Merchant : 6;
-			unsigned char CityID : 2;
-		} Info;
-	};
-
-	unsigned short Guild;
-	unsigned char  Class;
-	unsigned short  Rsv;
-	unsigned char Quest;
-
-	int			   Coin;
-
-	union
-	{
-		long long       Exp;
-		struct
-		{
-			int cExp;
-			int tExp;
-		};
-	};// The ammount of experience the mob has to level up
-
-	short		   SPX;			 // The Y position saved by the stellar gem, to teleport the mob there when using warp scroll
-	short		   SPY;			 // The Y position saved by the stellar gem, to teleport the mob there when using warp scroll
-
-	STRUCT_SCORE   BaseScore;    // The base score of the mob 
-	STRUCT_SCORE   CurrentScore; // The score the mob actually has
-
-	STRUCT_ITEM    Equip[MAX_EQUIP];	 // The items the mob is wearing
-	STRUCT_ITEM	   Carry[MAX_CARRY];	 // The items the mob is carrying
-
-	long LearnedSkill; // The skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
-	long nLearnedSkill; // The new skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
-
-	unsigned short ScoreBonus;   // The points the mob can use to increase score (Str, Int, Dex, Con)
-	unsigned short SpecialBonus; // The points the mob can use to increase special, to increase effect of learned skills (score->Special[4])
-	unsigned short SkillBonus;	 // The points the mob can use to buy skills
-
-	unsigned char  Critical;	 // The chance the mob has to deliver critical hits
-	unsigned char  SaveMana;	 // Uknown use, nomenclature of variable is correct to all current standards
-
-	char  SkillBar[4];  // The skills saved on the first 4 slots of the skill bar
-
-	unsigned char  GuildLevel;   // The mob's guuld level, used to define if it's a guild member or leader
-
-
-	unsigned char  UNK_1;
-
-	unsigned char  RegenHP;		 // UNK
-	unsigned char  RegenMP;		 // UNK
-
-	char UNK_2[206];
-
-	union
-	{
-		unsigned short  Resist[4];	 // The mob's resistencies, to fire / ice / thunder / magic
-		struct
-		{
-			unsigned short Fogo;
-			unsigned short Gelo;
-			unsigned short Sagrado;
-			unsigned short Trovao;
-		} Resistencia;//[4]
-	};
-
-	unsigned short Magic;
-	unsigned short RegenBonus;
-	char UNK_3[2];
 
  
-};
+ 
 
 
 //int ee = sizeof STRUCT_MOB;
@@ -674,8 +460,8 @@ struct STRUCT_MOBEXTRA
 
 		STRUCT_SCORE   BaseScore;    // The base score of the mob 
 
-		long LearnedSkill; // The skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
-		long nLearnedSkill; // The new skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
+		unsigned int LearnedSkill[2]; // The skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
+		  // The new skills the mob learned, divided into four categories (00 _ 00 _ 00 _ 00)
 
 		unsigned short ScoreBonus;   // The points the mob can use to increase score (Str, Int, Dex, Con)
 		unsigned short SpecialBonus; // The points the mob can use to increase special, to increase effect of learned skills (score->Special[4])
@@ -1543,61 +1329,13 @@ struct		  MSG_UpdateCarry
  
 #pragma pack(push, 1)
 const short  _MSG_UpdateScore				= (54 | FLAG_GAME2CLIENT | FLAG_CLIENT2GAME);
-struct		  MSG_UpdateScore
-{
-	_MSG;
-
-	STRUCT_SCORE   Score;
-
-	unsigned char  Critical;
-	unsigned char  SaveMana;
-
-	unsigned short Affect[MAX_AFFECT];
-	unsigned short Guild;
-	unsigned short GuildLevel;
-
-	union
-	{
-		unsigned short  Resist[4];	 // The mob's resistencies, to fire / ice / thunder / magic
-		struct
-		{
-			unsigned short Fogo;
-			unsigned short Gelo;
-			unsigned short Sagrado;
-			unsigned short Trovao;
-		} Resistencia;//[4]
-	};
-
-	unsigned char RegenHP;
-	unsigned char RegenMP;
-
-	int CurrHp;
-	int CurrMp;
-
-	unsigned short Magic;//ja divido
-	unsigned short LineageSkill;
-
-};
+ 
 
  //int ee = sizeof MSG_UpdateScore;
 #pragma pack(pop)
 
 const short  _MSG_UpdateEtc					= (55 | FLAG_GAME2CLIENT | FLAG_CLIENT2GAME);
-struct		  MSG_UpdateEtc
-{
-	_MSG;
-
-	unsigned int		    Hold;
-	long long			    Exp;
-	long       				Learn;
-	long	       			nLearn;
-	unsigned short			ScoreBonus;
-	unsigned short			SpecialBonus;
-	unsigned short			SkillBonus;
-	unsigned short          Magic;
-	int						Coin;
-	unsigned char           Skillbar[4];
-};
+ 
 
 const short  _MSG_CNFMobKill				= (56 | FLAG_GAME2CLIENT | FLAG_CLIENT2GAME); // TODO: Check, confirm, confirm structure.
 struct		  MSG_CNFMobKill

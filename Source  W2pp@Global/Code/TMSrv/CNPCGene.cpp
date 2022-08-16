@@ -359,7 +359,7 @@ void CNPCGenerator::DropList()
 
 		if (Leader)
 		{
-			STRUCT_MOB *MOB = &pList[i].Leader;
+			STRUCT_MOBNPC*MOB = &pList[i].Leader;
 
 			fprintf(fp, "MobName: %s\r\n\n", MOB->MobName);
 
@@ -477,7 +477,7 @@ void CNPCGenerator::DropList()
 
 		if (Follower)
 		{
-			STRUCT_MOB *MOB = &pList[i].Follower;
+			STRUCT_MOBNPC*MOB = &pList[i].Follower;
 
 			fprintf(fp, "MobName: %s\r\n\n", MOB->MobName);
 
@@ -636,7 +636,7 @@ void CNPCGenerator::LevelList()
 
 		if (Leader)
 		{
-			STRUCT_MOB *MOB = &pList[i].Leader;
+			STRUCT_MOBNPC*MOB = &pList[i].Leader;
 
 			fprintf(fp, "MobName: %s Level:%d\r\n\n", MOB->MobName, MOB->BaseScore.Level);
 
@@ -653,7 +653,7 @@ void CNPCGenerator::LevelList()
 
 		if (Follower)
 		{
-			STRUCT_MOB *MOB = &pList[i].Follower;
+			STRUCT_MOBNPC*MOB = &pList[i].Follower;
 
 			fprintf(fp, "MobName: %s Level:%d\r\n\n", MOB->MobName, MOB->BaseScore.Level);
 

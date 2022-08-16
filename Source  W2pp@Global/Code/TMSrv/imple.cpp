@@ -118,7 +118,7 @@ void ProcessImple(int conn, int level, char * str)
 			}
 			else if (!strcmp(sval1, "clearskill"))
 			{
-				pMob[conn].MOB.LearnedSkill = 0;
+				pMob[conn].MOB.LearnedSkill[0] = 0;
 				SendClientMessage(conn, "set clearskill");
 			}
 			else if (!strcmp(sval1, "level"))
@@ -1537,7 +1537,7 @@ void ProcessImple(int conn, int level, char * str)
 
 		else if (!strcmp(cmd, "learn"))
 		{
-			pMob[conn].MOB.LearnedSkill = -1;
+			pMob[conn].MOB.LearnedSkill[0] = -1;
 			SendEtc(conn);
 			SendClientMessage(conn, "LEARN");
 		}
@@ -1584,7 +1584,7 @@ void ProcessImple(int conn, int level, char * str)
 		{
 			int Group = ServerGroup;
 
-			if (ival1 > 0 && ival1 < 65536)
+			if (ival1 > 0 && ival1 < 10000)
 			{
 				MSG_GuildInfo sm_gif;
 				memset(&sm_gif, 0, sizeof(MSG_GuildInfo));

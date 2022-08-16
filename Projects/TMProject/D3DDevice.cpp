@@ -571,7 +571,7 @@ HRESULT D3DDevice::Initialize3DEnvironment()
 	if (strstr(strVGA, "MATROX") && strstr(strVGA, "G4"))
 		m_bG400 = 1;
 	if (strstr(strVGA, "INTEL") || strstr(strVGA, "810"))
-		m_bIntel = 1;
+		m_bIntel = 0;
 
 	m_bWindowed = m_d3dSettings.IsWindowed;
 	AdjustWindowForChange();

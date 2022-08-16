@@ -48,9 +48,9 @@ extern STRUCT_MOB g_pBaseSet[MAX_CLASS]; // Server.cpp
 extern int  ChargedGuildList[MAX_SERVER][MAX_GUILDZONE];
 extern STRUCT_ITEMLOG ItemDayLog[MAX_ITEMLIST];
 
-unsigned short	g_pGuildWar[65536] = {0,};
-unsigned short	g_pGuildAlly[65536] = {0,};
-STRUCT_GUILDINFO GuildInfo[65536];
+unsigned short	g_pGuildWar[10000] = {0,};
+unsigned short	g_pGuildAlly[10000] = {0,};
+STRUCT_GUILDINFO GuildInfo[10000];
 unsigned short  LastCapsule = 0; 
 
 
@@ -287,7 +287,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 			sprintf(temp, "guild war request %d %d", m->Parm1, m->Parm2);
 			Log(temp, "system", 0);
 
-			if(myguild <= 0 || myguild >= 65536)
+			if(myguild <= 0 || myguild >= 10000)
 				break;
 
 			g_pGuildWar[myguild] = m->Parm2;
@@ -321,7 +321,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 
 			Log(temp, "-system", 0);
 
-			if(myguild <= 0 || myguild >= 65536)
+			if(myguild <= 0 || myguild >= 10000)
 				break;
 
 			g_pGuildAlly[myguild] = m->Ally;
@@ -347,7 +347,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 			// char temp[256];
 
 
-			if(myguild <= 0 || myguild >= 65536)
+			if(myguild <= 0 || myguild >= 10000)
 				break;
 
 			GuildInfo[myguild] = m->GuildInfo;
@@ -2509,8 +2509,8 @@ void CFileDB::DBGetSelChar(STRUCT_SELCHAR *sel, STRUCT_ACCOUNTFILE *file)
 
 		sel->Guild[i] = file->Char[i].Guild;
 
-		sel->SPX[i] = file->Char[i].SPX;
-		sel->SPX[i] = file->Char[i].SPY;
+		sel->SPX[i] = file->Char[i].HomeTownX;
+		sel->SPX[i] = file->Char[i].HomeTownY;
 
 		sel->Score[i] = file->Char[i].CurrentScore;		
 

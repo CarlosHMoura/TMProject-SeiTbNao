@@ -71,7 +71,7 @@ void Exec_MSG_Action(int conn, char *pMsg)
 	//Skill Ilusão
 	if (m->Type == _MSG_Action3)
 	{
-		if (pMob[conn].MOB.Class != 3 || (pMob[conn].MOB.LearnedSkill & 2) == 0)
+		if (pMob[conn].MOB.Class != 3 || (pMob[conn].MOB.LearnedSkill[0] & 2) == 0)
 		{
 			if (pMob[conn].MOB.CurrentScore.Level < MAX_LEVEL)
 				if (AddCrackError(conn, 10, 28) == TRUE)
@@ -303,8 +303,8 @@ void Exec_MSG_Action(int conn, char *pMsg)
 				Unk = 16 * Unk;
 		}
 
-		pMob[conn].MOB.CurrentScore.Merchant = pMob[conn].MOB.CurrentScore.Merchant | Unk & 0xF0;
-		pMob[conn].MOB.BaseScore.Merchant = pMob[conn].MOB.CurrentScore.Merchant;
+		pMob[conn].MOB.CurrentScore.Reserved = pMob[conn].MOB.CurrentScore.Reserved | Unk & 0xF0;
+		pMob[conn].MOB.BaseScore.Reserved = pMob[conn].MOB.CurrentScore.Reserved;
 
 		if (BrState && BRItem > 0)
 		{

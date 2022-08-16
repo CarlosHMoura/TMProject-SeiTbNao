@@ -181,7 +181,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 				int skill = skillnum - 72;
 				int learned = 1 << (skillnum - 72);
 
-				if (m->ClientTick != SKIPCHECKTICK && !(learned & pMob[conn].MOB.LearnedSkill))
+				if (m->ClientTick != SKIPCHECKTICK && !(learned & pMob[conn].MOB.LearnedSkill[0]))
 				{
 					if (AddCrackError(conn, 208, 1))
 						return;
@@ -202,7 +202,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 			int learn = skillnum % MAX_SKILL;
 			int learnedSkill = 1 << learn;
 
-			if (m->ClientTick != SKIPCHECKTICK && !(learnedSkill & pMob[conn].MOB.LearnedSkill))
+			if (m->ClientTick != SKIPCHECKTICK && !(learnedSkill & pMob[conn].MOB.LearnedSkill[0]))
 			{
 				if (AddCrackError(conn, 8, 10))
 					return;
@@ -257,7 +257,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 
 	int master = 0;
 
-	if (!pMob[conn].MOB.Class && pMob[conn].MOB.LearnedSkill & 0x4000)
+	if (!pMob[conn].MOB.Class && pMob[conn].MOB.LearnedSkill[0] & 0x4000)
 	{
 		master = pMob[conn].MOB.CurrentScore.Special[2] / 20;
 
@@ -428,7 +428,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 
 			dam = 0;
 
-			if (i > 0 && m->Size < sizeof(MSG_AttackTwo) && pMob[conn].MOB.Class != 3 && (pMob[conn].MOB.LearnedSkill & 0x40) == 0)
+			if (i > 0 && m->Size < sizeof(MSG_AttackTwo) && pMob[conn].MOB.Class != 3 && (pMob[conn].MOB.LearnedSkill[0] & 0x40) == 0)
 			{
 				AddCrackError(conn, 10, 24);
 				continue;
@@ -456,7 +456,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 
 			dam = BASE_GetDamage((int)dam, Ac, master);
 
-			if (i == 0 && m->Size >= sizeof(MSG_AttackTwo) && pMob[conn].MOB.Class == 3 && (pMob[conn].MOB.LearnedSkill & 0x200000) && (rand() % 4) == 0)
+			if (i == 0 && m->Size >= sizeof(MSG_AttackTwo) && pMob[conn].MOB.Class == 3 && (pMob[conn].MOB.LearnedSkill[0] & 0x200000) && (rand() % 4) == 0)
 			{
 				int skilldam = (pMob[conn].MOB.CurrentScore.Special[3] + pMob[conn].MOB.CurrentScore.Str);
 
@@ -754,7 +754,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 				{
 					int Type = pMob[idx].Affect[k].Type;
 
-					if (Type == 1 || Type == 3 || Type == 5 || Type == 7 || Type == 10 || Type == 12 || Type == 20 || (Type == 32 && (1 << 7) & pMob[conn].MOB.LearnedSkill))
+					if (Type == 1 || Type == 3 || Type == 5 || Type == 7 || Type == 10 || Type == 12 || Type == 20 || (Type == 32 && (1 << 7) & pMob[conn].MOB.LearnedSkill[0]))
 					{
 						pMob[idx].Affect[k].Type = 0;
 						NeedUpdate = 1;
@@ -1418,7 +1418,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 			{
 				int attackdex = pMob[conn].MOB.CurrentScore.Dex / 5;
 
-				if (pMob[conn].MOB.LearnedSkill & 0x1000000)
+				if (pMob[conn].MOB.LearnedSkill[0] & 0x1000000)
 					attackdex += 100;
 
 				if (pMob[conn].MOB.Rsv & 0x40)
@@ -1563,7 +1563,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 					pUser[idx].ReqMp = pUser[idx].ReqMp - tDamage;
 					SetReqMp(idx);
 
-					int abs = (1 << 23) & pMob[conn].MOB.LearnedSkill ? 50 : 55;
+					int abs = (1 << 23) & pMob[conn].MOB.LearnedSkill[0] ? 50 : 55;
 
 					tDamage = ((tDamage >> 1) + (tDamage << 4)) / abs;
 					m->Dam[i].Damage = tDamage;
@@ -1729,7 +1729,7 @@ void Exec_MSG_Attack(int conn, char *pMsg)
 		Exp = 200;
 
 	//Espectral
-	if ((pMob[conn].MOB.LearnedSkill & (1 << 29)) != 0)
+	if ((pMob[conn].MOB.LearnedSkill[0] & (1 << 29)) != 0)
 		m->DoubleCritical = m->DoubleCritical | 8;
 
 	m->CurrentExp = pMob[conn].MOB.Exp;

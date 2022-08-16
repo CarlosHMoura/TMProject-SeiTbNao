@@ -82,8 +82,8 @@ public:
 	void SetEncPassword			(int idx, int newsrv, int *Enc, int Unk);
 };
 
-extern STRUCT_GUILDINFO GuildInfo[65536];
-extern unsigned short	g_pGuildWar[65536];
-extern unsigned short	g_pGuildAlly[65536];
+extern STRUCT_GUILDINFO GuildInfo[10000];
+extern unsigned short	g_pGuildWar[10000];
+extern unsigned short	g_pGuildAlly[10000];
 extern unsigned short   LastCapsule;
 #endif

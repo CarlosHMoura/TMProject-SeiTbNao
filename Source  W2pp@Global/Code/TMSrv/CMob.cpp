@@ -552,7 +552,7 @@ int CMob::SetSegment()
 			{
 				SegmentProgress = 4;
 				Mode = 4;
-				MOB.BaseScore.Merchant = MOB.Merchant;
+				MOB.BaseScore.Reserved = MOB.Merchant;
 				int len = strlen(Route);
 				int rt = 0;
 
@@ -714,7 +714,7 @@ void CMob::GetCurrentScore(int idx)
 		ExpBonus += 32;
 
 	//Concentração
-	if ((MOB.LearnedSkill & (1 << 28)) != 0)
+	if ((MOB.LearnedSkill[0] & (1 << 28)) != 0)
 		Accuracy += 50;
 
 	if(MOB.Resist[0] < 0 && idx < MAX_USER)
@@ -742,14 +742,14 @@ void CMob::GetCurrentScore(int idx)
 	int fw2 = (w2 / 2);
 
 	//Pericia do caçador
-	if(MOB.LearnedSkill & (1 << 10) && MOB.Class == 3)
+	if(MOB.LearnedSkill[0] & (1 << 10) && MOB.Class == 3)
 	{
 		fw1 = w1;
 		fw2 = w2;
 	}
 
 	//Mestre das Armas
-	if(MOB.LearnedSkill & (1 << 9) && MOB.Class == 0)
+	if(MOB.LearnedSkill[0] & (1 << 9) && MOB.Class == 0)
 	{
 		fw1 = w1;
 		fw2 = w2;
@@ -757,11 +757,11 @@ void CMob::GetCurrentScore(int idx)
 
 	if(MOB.Class == 2)
 	{
-		if(MOB.LearnedSkill & (1 << 17))
+		if(MOB.LearnedSkill[0] & (1 << 17))
 			ReflectDamage += ((MOB.CurrentScore.Special[3] + 1) / 6);
 
 		//Escudo do tormento
-		if(MOB.LearnedSkill & (1 << 19) && g_pItemList[MOB.Equip[7].sIndex].nPos == 128)
+		if(MOB.LearnedSkill[0] & (1 << 19) && g_pItemList[MOB.Equip[7].sIndex].nPos == 128)
 			MOB.CurrentScore.Ac += (BASE_GetItemAbility(&MOB.Equip[7], EF_AC) + 1) / 7;
 	}
 
