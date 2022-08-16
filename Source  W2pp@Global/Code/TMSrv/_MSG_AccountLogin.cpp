@@ -22,7 +22,7 @@ void Exec_MSG_AccountLogin(int conn, char *pMsg)
 {
 	MSG_AccountLogin *m = (MSG_AccountLogin*)pMsg;
 
-	int Size = m->Size;
+	int Size = m->Header.Size;
 	int ClientVersion = APP_VERSION;
 
 	pUser[conn].AccountName[NAME_LENGTH - 1] = 0;
@@ -64,14 +64,14 @@ void Exec_MSG_AccountLogin(int conn, char *pMsg)
 
 	int tMac = 0;
 
-	if (m->Size < sizeof(MSG_AccountLogin))
+	if (m->Header.Size < sizeof(MSG_AccountLogin))
 		memset(pUser[conn].Mac, 0xFF, sizeof(pUser[conn].Mac));
 	else
 		memcpy(pUser[conn].Mac, m->AdapterName, sizeof(pUser[conn].Mac));
 
 
-	m->Type = _MSG_DBAccountLogin;
-	m->ID = conn;
+	m->Header.Type = _MSG_DBAccountLogin;
+	m->Header.ID = conn;
 
 	sscanf(m->AccountName, "%s", pUser[conn].AccountName);
 

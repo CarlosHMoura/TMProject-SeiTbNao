@@ -506,12 +506,12 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 			if((ac[0] == 'C' && ac[1] == 'O' && ac[2] == 'M' && ac[3] >= '0' && ac[3] <= '9' && ac[4] == 0) || 
 				(ac[0] == 'L' && ac[1] == 'P' && ac[2] == 'T' && ac[3] >= '0' && ac[3] <= '9' && ac[4] == 0))
 			{
-				SendDBSignal(conn, m->ID, _MSG_DBAccountLoginFail_Account);
+				SendDBSignal(conn, m->Header.ID, _MSG_DBAccountLoginFail_Account);
 
 				return FALSE;
 			}
 
-			int Idx = GetIndex(conn, m->ID);
+			int Idx = GetIndex(conn, m->Header.ID);
 			int IdxName = GetIndex(m->AccountName);
 
 			STRUCT_ACCOUNTFILE file;
@@ -524,7 +524,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 
 			if(ret == 0)
 			{
-				SendDBSignal(conn, m->ID, _MSG_DBAccountLoginFail_Account);
+				SendDBSignal(conn, m->Header.ID, _MSG_DBAccountLoginFail_Account);
 
 				return TRUE;
 			}
@@ -541,7 +541,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 
 				if(file.Info.Year >= when.tm_year || file.Info.Year >= when.tm_year && file.Info.YearDay >= when.tm_yday)
 				{
-					SendDBSignalParm(conn, m->ID, _MSG_DBAccountLoginFail_Block, 0);
+					SendDBSignalParm(conn, m->Header.ID, _MSG_DBAccountLoginFail_Block, 0);
 					return TRUE;
 				}
 			}
@@ -563,7 +563,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 
 			if(strcmp(file.Info.AccountPass, m->AccountPassword) != 0)
 			{
-				SendDBSignal(conn, m->ID, _MSG_DBAccountLoginFail_Pass);
+				SendDBSignal(conn, m->Header.ID, _MSG_DBAccountLoginFail_Pass);
 				 
 				return TRUE;
 			}
@@ -578,12 +578,12 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 
 				if(m->DBNeedSave == 0)
 				{
-					SendDBSignal(conn, m->ID, _MSG_DBAlreadyPlaying);
+					SendDBSignal(conn, m->Header.ID, _MSG_DBAlreadyPlaying);
 
 					return TRUE;
 				}
 
-				SendDBSignal(conn, m->ID, _MSG_DBStillPlaying);
+				SendDBSignal(conn, m->Header.ID, _MSG_DBStillPlaying);
 				SendDBSavingQuit(IdxName, 0);
 
 				break;
@@ -653,7 +653,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 			memset(&sm, 0, sizeof(MSG_DBCNFAccountLogin));
 
 			sm.Type = _MSG_DBCNFAccountLogin;
-			sm.ID = m->ID;
+			sm.ID = m->Header.ID;
 
 			sm.Unknow_28 = 0xCCCCCCCC;
 
@@ -703,7 +703,7 @@ int CFileDB::ProcessMessage(char *Msg, int conn)
 				MSG_CNFCharacterLogin sm;
 
 				sm.Type = _MSG_DBCNFCharacterLogin;
-				sm.ID = m->ID;
+				sm.ID = m->Header.ID;
 				sm.Size = sizeof(MSG_CNFCharacterLogin);
 
 				sm.Slot = Slot;

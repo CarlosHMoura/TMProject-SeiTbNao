@@ -24,15 +24,7 @@ constexpr auto MAX_ITEM_PRICE_REPLACE = 100;
 
 constexpr auto MSG_Recall_Opcode = 0x289;
 constexpr auto MSG_Ping_Opcode = 0x3A0;
-struct MSG_STANDARD
-{
-	unsigned short Size;
-	char KeyWord;
-	char CheckSum;
-	unsigned short Type;
-	unsigned short ID;
-	unsigned int Tick;
-};
+
 
 constexpr auto MSG_RequestCapsuleInfo_Opcode = 0x2CD;
 constexpr auto MSG_DelayStart_Opcode = 0x3AE;
@@ -905,16 +897,7 @@ struct MSG_UpdateAffect
 };
 
 constexpr auto MSG_AccountLogin_Opcode = 0x20D;
-struct MSG_AccountLogin
-{
-	MSG_STANDARD Header;
-	char AccountPass[16];
-	char AccountName[16];
-	char TID[52];
-	int Version;
-	int Force;
-	unsigned int Mac[4];
-};
+ 
 
 constexpr auto MSG_MessageWhisper_Opcode = 0x334;
 constexpr auto MSG_MessageShout_Opcode = 0xD1D;

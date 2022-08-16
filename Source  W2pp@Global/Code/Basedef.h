@@ -23,7 +23,7 @@
 
 #include <time.h>
 #include <Windows.h>
-
+#include <SharedStructs.h>
 #pragma region Defines
 
 //#define PKDrop
@@ -1044,12 +1044,7 @@ struct STRUCT_BLOCKMAC
 
 #pragma region Messages defines and structures
 
-#define _MSG      	short		  Size;			\
-					char		  KeyWord;		\
-					char		  CheckSum;		\
-					short		  Type;			\
-					short		  ID;			\
-					unsigned int  ClientTick;
+
 
 const int FLAG_GAME2CLIENT			= 0x0100;
 const int FLAG_CLIENT2GAME			= 0x0200;
@@ -1335,41 +1330,7 @@ struct		  MSG_MessageBoxOk
 
 const short  _MSG_AccountLogin				= (13 | FLAG_CLIENT2GAME);
 const short  _MSG_CNFAccountLogin			= (10 | FLAG_GAME2CLIENT);
-#pragma pack(push, 1)
-struct		  MSG_AccountLogin
-{
-	_MSG;
 
-	char AccountPassword[ACCOUNTPASS_LENGTH];
-	char AccountName[ACCOUNTNAME_LENGTH];
-
-	char Zero[52];
-
-
-	int  ClientVersion;
-
-	int  DBNeedSave;
-
-	int AdapterName[4];
-};
-struct		  MSG_AccountLogin_HWID
-{
-	_MSG;
-
-	char AccountPassword[ACCOUNTPASS_LENGTH];
-	char AccountName[ACCOUNTNAME_LENGTH];
-
-	char Zero[52];
-
-	int  ClientVersion;
-
-	int  DBNeedSave;
-
-	int AdapterName[4];
-
-	char HwId[50];
-};
-#pragma pack(pop)
 
 const short  _MSG_AccountSecure				= (222 | FLAG_DB2GAME | FLAG_GAME2DB | FLAG_CLIENT2GAME | FLAG_GAME2CLIENT);
 const short  _MSG_AccountSecureFail			= (223 | FLAG_DB2GAME | FLAG_GAME2DB | FLAG_CLIENT2GAME | FLAG_GAME2CLIENT);

@@ -18711,8 +18711,8 @@ int TMFieldScene::OnPacketCNFRemoveServer(MSG_CNFRemoveServer* pStd)
 		MSG_AccountLogin stAccountLogin{};
 		stAccountLogin.Header.ID = 0;
 		stAccountLogin.Header.Type = MSG_AccountLogin_Opcode;
-		stAccountLogin.Version = 1758;
-		stAccountLogin.Force = 1;
+		stAccountLogin.ClientVersion = 1758;
+		stAccountLogin.DBNeedSave = 1;
 
 		ULONG dwSize = 0;
 		IP_ADAPTER_INFO stInfo{};
@@ -18737,13 +18737,13 @@ int TMFieldScene::OnPacketCNFRemoveServer(MSG_CNFRemoveServer* pStd)
 			}
 
 			temp[tpos] = 0;
-			sscanf(temp, "%x %x %x %x",	stAccountLogin.Mac,	&stAccountLogin.Mac[1],	&stAccountLogin.Mac[2],	&stAccountLogin.Mac[3]);
+			sscanf(temp, "%x %x %x %x",	stAccountLogin.AdapterName,	&stAccountLogin.AdapterName[1],	&stAccountLogin.AdapterName[2],	&stAccountLogin.AdapterName[3]);
 			free(pInfo);
 		}
 
 		strncpy(stAccountLogin.AccountName, pStd->AccountName, sizeof(pStd->AccountName));
-		strncpy(stAccountLogin.TID, pStd->TID, sizeof(pStd->TID));
-		sprintf(stAccountLogin.AccountPass, "");
+		strncpy(stAccountLogin.Zero, pStd->TID, sizeof(pStd->TID));
+		sprintf(stAccountLogin.AccountPassword, "");
 		SendOneMessage((char*)&stAccountLogin, sizeof(stAccountLogin));
 		return 1;
 	}
