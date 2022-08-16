@@ -9,6 +9,7 @@
 - Foi adicionado a leitura do Lang.txt
 - Foi adicionado inicialização dos componentes da arena real @SkyDrive
 - Foi adicionado os slots novos 16 e 17, deve ser alterado no servidor o MAX_EQUIP para 18
+- Foi adicionado algumas descompilações na pasta Descompilations
 - Deve se utilizar o visual studio 2022
 
 
