@@ -7,6 +7,8 @@
 - Foi adicionado uma tool de conversão da itemlist
 - Foi adicionado o cliente base para o funcionamento do mesmo
 - Foi adicionado a leitura do Lang.txt
+- Foi A inicialização dos componentes da arena real @SkyDrive
+- Foi adicionado os slots novos 16 e 17, deve ser alterado no servidor o MAX_EQUIP para 18
 - Deve se utilizar o visual studio 2022
 
 
