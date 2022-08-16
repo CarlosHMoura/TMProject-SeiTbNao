@@ -193,6 +193,8 @@ TMFieldScene::TMFieldScene()
 	m_pGridDRing = nullptr;
 	m_pGridMantua = nullptr;
 	m_pEventPanel = nullptr;
+	m_pGridNewSlot1 = nullptr;
+	m_pGridNewSlot2 = nullptr;
 	m_dwLastAutoAttackTime = 0;
 	m_nCoinMsgType = 0;
 	m_dwOpID = 0;
@@ -1531,7 +1533,8 @@ int TMFieldScene::InitializeScene()
 	m_pGridMantua = (SGridControl*)m_pControlContainer->FindControl(65547);
 	m_pGridSkillMaster = (SGridControl*)m_pControlContainer->FindControl(65607);
 	m_pGridShop = (SGridControl*)m_pControlContainer->FindControl(65694);
-
+	m_pGridNewSlot1 = (SGridControl*)m_pControlContainer->FindControl(1048976);
+	m_pGridNewSlot2 = (SGridControl*)m_pControlContainer->FindControl(1048977);
 	m_pGridShop->m_bDrawGrid = 1;
 	m_pGridShop->m_eGridType = TMEGRIDTYPE::GRID_SHOP;
 	m_pGridMantua->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
@@ -13208,6 +13211,8 @@ void TMFieldScene::SetEquipGridState(int bDefault)
 		m_pGridOrb->m_eGridType = TMEGRIDTYPE::GRID_DEFAULT;
 		m_pGridCabuncle->m_eGridType = TMEGRIDTYPE::GRID_DEFAULT;
 		m_pGridDRing->m_eGridType = TMEGRIDTYPE::GRID_DEFAULT;
+		m_pGridNewSlot1->m_eGridType = TMEGRIDTYPE::GRID_DEFAULT;
+		m_pGridNewSlot2->m_eGridType = TMEGRIDTYPE::GRID_DEFAULT;
 	}
 	else
 	{
@@ -13225,6 +13230,8 @@ void TMFieldScene::SetEquipGridState(int bDefault)
 		m_pGridOrb->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
 		m_pGridCabuncle->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
 		m_pGridDRing->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
+		m_pGridNewSlot1->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
+		m_pGridNewSlot1->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
 	}
 
 	m_pGridMantua->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
