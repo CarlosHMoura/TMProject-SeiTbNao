@@ -663,10 +663,8 @@ public:
 	SGridControl* m_pGridCabuncle;
 	SGridControl* m_pGridDRing;
 	SGridControl* m_pGridMantua;
-
 	SGridControl* m_pGridNewSlot1;
 	SGridControl* m_pGridNewSlot2;
-
 	SGridControl* m_pGridHellStore;
 	MSG_MOVESTOP m_stMoveStop;
 	SPanel* m_pFlagDesc;
