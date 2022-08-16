@@ -46,3 +46,6 @@ Congelar
 Chama_Resistente
 Sangrar
 Última_Resistência
+lucky
+RoyalArena
+Guild

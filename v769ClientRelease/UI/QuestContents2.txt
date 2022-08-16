@@ -1,6 +1,6 @@
 FFFFAA << Cubo da Maldade - Normal >>  
 FFFFFF 
-FFFFFF Arnold, um ferreiro de Azran está tramando uma coisa
+FFFFFF Arnold, o ferreiro, está tramando uma coisa
 FFFFFF interessante. Ele está vendendo convites, isso é
 FFFFFF estranho. Bom... Com o convite que ele vende vá  
 FFFFFF até onde ele trabalha na entrada de Azran. Estou
@@ -45,7 +45,7 @@ FFFFFF Espero que você também saiba disso.
 FFFFFF 
 FFFFFF Se você quer ficar nessa terra, então pegue
 FFFFFF o papel de desafiante que deve estar com você,
-FFFFFF vá ao castelo de Noatun e use o papel de desafiante
+FFFFFF vá ao castelo de Noatun e use a carta de duelo
 FFFFFF sobre o altar. Se conseguir resolver o mistério
 FFFFFF que esta escondido no quarto
 FFFFFF você poderá ganhar muita experiência.
@@ -54,7 +54,7 @@ FFFFFF Se você tiver em mãos o símbolo de coragem,
 FFFFFF poderá obter a "Pedra da Luz Sagrada"
 FFFFFF e a "Pedra Espiritual".
 FFFFFF 
-AAFFFF Está preparado para desvendar o mistério do quarto?
+AAFFFF Está preparado para desvendar o mistério?
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -80,8 +80,8 @@ FFFFFF
 FFFFFF 
 FFFFAA << Rastros além do céu >> 
 FFFFFF 
-FFFFFF Como se sente em descobrir aos poucos os segredos além do céu?
-FFFFFF Junte 7 cristais que foram usados no lugar além do céu,
+FFFFFF Como se sente em descobrir os segredos celeste?
+FFFFFF Junte 7 cristais que foram usados além do céu,
 FFFFFF e leve-os para o Dragão Dourado de Armia.
 FFFFFF 
 FFFFFF Ele irá atribuir poderes especiais em sua arma.
@@ -103,15 +103,15 @@ FFFFFF
 FFFFFF Recentemente nos reinos de Armia, Azran e Erion
 FFFFFF estão acontecendo coisas misteriosas.
 FFFFFF Não há nada explicando sobre essas coisas,
-FFFFFF Queria pedir para você investigar melhor sobre esse fato 
-FFFFFF Por favor, investigue Erion primeiro.
-FFFFFF As pessoas de Erion precisam da sua ajuda
-FFFFFF A unica coisa que sabemos é que esse fenomeno é chamado
+FFFFFF Queria que você investigasse sobre esse fato 
+FFFFFF Por favor, investigue em Erion primeiro.
+FFFFFF As pessoas de Erion precisam da sua ajuda.
+FFFFFF Sabemos que esse fenomeno é chamado
 FFFFFF de Pesadelo, pois as pessoas morrem enquanto
 FFFFFF dormem....em seus sonhos.
 FFFFFF 
 FFFFFF 
-AAFFFF O pesadelo pode ser mais real do que você imagina.
+AAFFFF O pesadelo pode ser muito real!
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -142,14 +142,14 @@ FFFFAA << Pedra da Troca >>
 FFFFFF 
 FFFFFF Ei! Porque está tão desanimado?
 FFFFFF 
-FFFFFF Não gostou do nome que escolheu? Você pode mudar!
+FFFFFF Não gostou do seu nome? Você pode mudar!
 FFFFFF 
 FFFFFF A comerciante Berdes, de Akelonia está vendendo
-FFFFFF pedras especiais. Compre dela a Pedra da Troca Maior.
-FFFFFF Para trocar seu nome, você também precisará da Pedra
-FFFFFF da Troca Menor, vendida pela comerciante Redmiron, 
-FFFFFF em Hekalotia. Com as duas pedras mágicas em mãos,
-FFFFFF você finalmente terá um nome digno de um guerreiro
+FFFFFF pedras especiais. Compre a Pedra da Troca Maior.
+FFFFFF Para a trocar, você também precisará da Pedra
+FFFFFF da Troca Menor, vendida pela Redmiron, 
+FFFFFF em Hekalotia. Com as duas pedras mágicas,
+FFFFFF você terá um nome digno de um guerreiro
 FFFFFF do seu nivel e poder.
 AAFFFF Agora é hora de trocar nomes...
 FFFFFF 
@@ -160,9 +160,9 @@ FFFFFF
 FFFFFF 
 FFFFAA << Zona Elemental da Água - Normal >> 
 FFFFFF 
-FFFFFF São 8 quartos que formam a Zona Elemental da Água. 
-FFFFFF Você, que passou por todas elas com o Pergaminho
-FFFFFF da Água, deve saber que a recompensa é o "Tomo do Mago".
+FFFFFF São 8 quartos que formam a Zona da Água. 
+FFFFFF Você, que passou por todas com o Pergaminho,
+FFFFFF sabe que a recompensa é o "Tomo do Mago".
 FFFFFF Se você estiver realmente com sorte,
 FFFFFF poderá até obter a "Fada Guardiã".
 FFFFFF Essa quest está dividida em Normal, Místico
@@ -193,7 +193,7 @@ FFFFFF encontrará o Lorde Zakum, e poderá obter o Imp
 FFFFFF que é evocado por ele.
 FFFFFF 
 FFFFFF 
-AAFFFF O Imp pode ser um ótimo aliado ou um temivel inimigo.
+AAFFFF O Imp pode ser um bom aliado ou um temivel inimigo.
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -221,11 +221,11 @@ FFFFFF
 FFFFFF
 FFFFAA << Zona Elemental da Água - Místico >> 
 FFFFFF 
-FFFFFF São 8 quartos que formam a Zona Elemental da Água. 
-FFFFFF Você, que passou por todas elas com o Pergaminho
-FFFFFF da Água, deve saber que a recompensa é o "Tomo do Mago".
+FFFFFF São 8 quartos que formam a Zona da Água. 
+FFFFFF Você, que passou por todas com o Pergaminho,
+FFFFFF sabe que a recompensa é o "Tomo do Mago".
 FFFFFF Se você estiver realmente com sorte,
-FFFFFF poderá obter a "Fada Guardiã".
+FFFFFF poderá até obter a "Fada Guardiã".
 FFFFFF Essa quest está dividida em Normal, Místico
 FFFFFF e Arcano, e cada nível possui monstros 
 FFFFFF mais fortes.
@@ -251,7 +251,7 @@ FFFFFF e eles deixam monstros soltos ali... quem tiver o
 FFFFFF melhor desempenho recebe prêmios.
 FFFFFF Se quiser ganhar fama e GOLD, vá ao coliseu.
 FFFFFF 
-AAFFFF No seu nivel, acho melhor você ir às 8 horas da noite.
+AAFFFF Nesse nivel, acho melhor você ir às 8 horas da noite.
 FFAAFF 
 FFFFFF 
 FFFFFF 
@@ -263,16 +263,16 @@ FFFFFF
 FFFFFF Recentemente nos reinos de Armia, Azran e Erion
 FFFFFF estão acontecendo coisas misteriosas.
 FFFFFF Não há nada explicando sobre essas coisas,
-FFFFFF Queria pedir para você investigar melhor sobre esse fato 
-FFFFFF Por favor, investigue Erion primeiro.
+FFFFFF Queria que você investigasse sobre esse fato 
+FFFFFF Por favor, investigue em Erion primeiro.
 FFFFFF As pessoas de Erion precisam da sua ajuda
-FFFFFF A unica coisa que sabemos é que esse fenomeno é chamado
+FFFFFF Sabemos que esse fenomeno é chamado
 FFFFFF de Pesadelo, pois as pessoas morrem enquanto
 FFFFFF dormem....em seus sonhos.
 FFFFFF 
 AAFFFF Agora é a vez de ajudar a cidade de Armia.
 FFFFFF 
-AAFFFF O pesadelo pode ser mais real do que você imagina. 
+AAFFFF O pesadelo pode ser muito real!
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -283,15 +283,15 @@ FFFFFF
 FFFFFF Você ouviu boatos sobre o Portão do Inferno?
 FFFFFF 
 FFFFFF O reino todo está só falando sobre este assunto,
-FFFFFF os aventureiros chamaram esse local de Portão do Inferno... 
+FFFFFF Todos os guerreiros chamam esse local assim
 FFFFFF Você também não está curioso? 
 FFFFFF 
-FFFFFF Para poder entrar lá é necessário um "ticket" de entrada...
+FFFFFF Para entrar, é necessário um "ticket"...
 FFFFFF Mas o resto é por sua conta e risco. 
-FFFFFF Dizem que dentro desse Portão existem lindas mulheres...
+FFFFFF Dizem que nesse portão existem lindas mulheres...
 FFFFFF  
 FFFFFF 
-AAFFFF Ou é esse o boato que os monstros espalharam?
+AAFFFF Ou é esse o boato criado por monstros?
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -300,9 +300,9 @@ FFFFFF
 FFFFFF 
 FFFFAA << Medalha do Reino >>  
 FFFFFF 
-FFFFFF Vi o Oráculo do reino fazendo magias bem interessantes.
-FFFFFF Junte 10 Safiras e
-FFFFFF junto com o seu Mestre da guilda,
+FFFFFF Vi o Oráculo fazendo magias bem interessantes.
+FFFFFF Junte 10 Safiras e,
+FFFFFF junto ao seu Mestre da guilda,
 FFFFFF dê ao Oráculo, assim a sua medalha de Guilda
 FFFFFF vira uma medalha de Reino e você poderá
 FFFFFF transferir a medalha para alguém da sua guilda.
@@ -310,7 +310,7 @@ FFFFFF Não é interessante?
 FFFFFF 
 FFFFFF Isso vai agilizar as tarefas da sua guilda.
 FFFFFF 
-AAFFFF Lembre-se, uma guilda unida é uma guilda forte.
+AAFFFF Lembre-se, uma guilda unida é mais forte.
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -321,18 +321,18 @@ FFFFFF
 FFFFFF
 FFFFAA << Tempestade Inacabável >>  
 FFFFFF 
-FFFFFF Está na hora de você mostrar a sua lealdade e sua
+FFFFFF Está na hora de mostrar a sua lealdade e sua
 FFFFFF coragem para todo o reino.
-FFFFFF Estamos com dificuldades no Castelo Noatun porque os
-FFFFFF inimigos estão cada vez mais fortes.
-FFFFFF Se você derrotar o rei do reino oponente você poderá 
+FFFFFF Estamos com dificuldades no Castelo Noatun 
+FFFFFF porque os inimigos estão cada vez mais fortes.
+FFFFFF Se derrotar o rei do reino oponente, você poderá 
 FFFFFF obter o símbolo da coragem.
-FFFFFF Esse símbolo serve também para desvendar o mistério
-FFFFFF do quarto secreto.
-FFFFFF Estarei esperando para saber se você realmente tem coragem!
+FFFFFF Esse símbolo serve também para desvendar 
+FFFFFF o mistério do quarto secreto.
+FFFFFF Estarei esperando por sua coragem!
 FFFFFF 
-AAFFFF Mas já vou avisando, a guerra não é lugar para aqueles
-AAFFFF que não possuem bravura no coração.
+AAFFFF Mas já vou avisando, a guerra não é lugar para
+AAFFFF quem não possuem bravura no coração.
 FFFFFF 
 FFFFFF 
 FFFFFF 
@@ -352,7 +352,7 @@ FFFFFF e eles deixam monstros soltos ali... quem tiver o
 FFFFFF melhor desempenho recebe premios.
 FFFFFF Se quiser ganhar fama e GOLD, vá ao coliseu.
 AAFFFF 
-AAFFFF No seu nivel, acho melhor você ir às 9 horas da noite.
+AAFFFF Nesse nivel, acho melhor você ir às 9 horas da noite.
 FFFFFF
 FFFFFF 
 FFFFFF 
@@ -360,17 +360,17 @@ FFFFFF
 FFAAFF 
 FFFFAA << Zona Elemental da Água - Arcano >>  
 FFFFFF 
-FFFFFF São 8 quartos que formam a Zona Elemental da Água. 
-FFFFFF Você, que passou por todas elas com o Pergaminho
-FFFFFF da Água, deve saber que a recompensa é o "Tomo do Mago".
+FFFFFF São 8 quartos que formam a Zona da Água. 
+FFFFFF Você, que passou por todas com o Pergaminho,
+FFFFFF sabe que a recompensa é o "Tomo do Mago".
 FFFFFF Se você estiver realmente com sorte,
-FFFFFF poderá obter a "Fada Guardiã".
+FFFFFF poderá até obter a "Fada Guardiã".
 FFFFFF Essa quest está dividida em Normal, Místico
 FFFFFF e Arcano, e cada nível possui monstros 
 FFFFFF mais fortes.
 FFFFFF Agora só resta o nível Arcano... 
 FFFFFF Sei que você está querendo descansar um pouco,
-FFFFFF mas o caminho do herói é o mais longo e perigoso.
+FFFFFF mas o caminho é o mais longo e perigoso.
 AAFFFF 
 AAFFFF E lembre-se, a água é o elemento da vida.
 FFFFFF 
@@ -380,14 +380,14 @@ FFFFFF
 FFFFFF 
 FFFFAA << À procura da Vida Eterna >>  
 FFFFFF 
-FFFFFF Passou-se muito tempo desde que estamos juntos...
+FFFFFF Passou-se muito tempo que estamos juntos...
 FFFFFF 
 FFFFFF Você deve ter ouvido entre os 
 FFFFFF aventureiros... Sobre o poder que surge 
 FFFFFF quando alguém junta todas as almas 
 FFFFFF escondidas na época da Guerra Lendária.
 FFFFFF 
-FFFFFF Junte as Pedras da Imortalidade de Fênix e Unicórnio
+FFFFFF Junte as Almas da Fênix e Unicórnio
 FFFFFF e entregue-as para o Oráculo.
 FFFFFF 
 FFFFFF Esse é o primeiro passo para se tornar um Arch.
@@ -403,7 +403,7 @@ FFFFFF
 FFFFFF Faz um longo tempo...
 FFFFFF Estive observando o seu crescimento e 
 FFFFFF estou feliz com o que vi.
-FFFFFF Impressionante! você conseguiu a pedra da imortalidade!
+FFFFFF você conseguiu a pedra da imortalidade!
 FFFFFF Mas agora é só o começo.
 FFFFFF 
 FFFFFF Vou te contar o segredo da Sephira. Junte os 8 
@@ -412,9 +412,9 @@ FFFFFF e vá para o Mestre de Skill de Armia.
 FFFFFF 
 FFFFFF Ele irá produzir o Sephirot para você.
 FFFFFF Leve o Sephirot e a pedra da
-FFFFFF imortalidade ao seu rei, e você poderá se tornar um Arch! 
+FFFFFF imortalidade ao seu rei, e se tornará um Arch! 
 FFFFFF 
-AAFFFF Espero que a glória do Sephira esteja sempre com você!
+AAFFFF Que a glória do Sephira esteja com você!
 AAFFFF 
 FFFFFF 
 FFFFFF 
@@ -423,10 +423,10 @@ FFFFFF
 FFFFFF Recentemente nos reinos de Armia, Azran e Erion
 FFFFFF estão acontecendo coisas misteriosas.
 FFFFFF Não há nada explicando sobre essas coisas,
-FFFFFF Queria pedir para você investigar melhor sobre esse fato 
-FFFFFF Por favor, investigue Erion primeiro.
+FFFFFF Queria que você investigasse sobre esse fato 
+FFFFFF Por favor, investigue em Erion primeiro.
 FFFFFF As pessoas de Erion precisam da sua ajuda
-FFFFFF A unica coisa que sabemos é que esse fenomeno é chamado
+FFFFFF  Sabemos que esse fenomeno é chamado
 FFFFFF de Pesadelo, pois as pessoas morrem enquanto
 FFFFFF dormem....em seus sonhos.
 FFFFFF 
