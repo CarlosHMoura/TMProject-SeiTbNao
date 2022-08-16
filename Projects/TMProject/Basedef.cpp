@@ -296,24 +296,11 @@ void BASE_InitEffectString()
 int BASE_InitializeBaseDef()
 {
     int ret = 0;
-    if (1 != BASE_InitializeServerList())
-    {
-        LOG_WRITELOGSTRING("Initialize BASE_InitializeServerList Failed\r\n");
-        return 0;
-    }
-    if (1 != BASE_ReadSkillBin()) {
-        LOG_WRITELOGSTRING("Initialize BASE_ReadSkillBin Failed\r\n");
-        return 0;
-    }
-    if (1 != BASE_ReadItemList()) {
-        LOG_WRITELOGSTRING("Initialize BASE_ReadItemList Failed\r\n");
-        return 0;
-    }
-    if (1 != BASE_InitializeAttribute()) {
-        LOG_WRITELOGSTRING("Initialize BASE_InitializeAttribute Failed\r\n");
-        return 0;
-    }
-    return 1;
+    ret = BASE_InitializeServerList() & 1;
+    ret = BASE_ReadSkillBin() & ret;
+    ret = BASE_ReadItemList() & ret;
+    ret = BASE_InitializeAttribute() & ret;
+	return ret;
 }
 
 void BASE_ReadItemPrice()
