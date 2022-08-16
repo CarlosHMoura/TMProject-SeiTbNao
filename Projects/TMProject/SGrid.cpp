@@ -3565,7 +3565,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 			pMobData->Equip[0].sIndex,
 			pMobData->Equip,
 			g_pObjectManager->m_stSelCharData.Equip[g_pObjectManager->m_cCharacterSlot][0].sIndex);
-
+ 
 		for (int l = 0; l < 49; ++l)
 		{
 			int add = BASE_GetStaticItemAbility(pItem->m_pItem, dwEFParam[l]);
