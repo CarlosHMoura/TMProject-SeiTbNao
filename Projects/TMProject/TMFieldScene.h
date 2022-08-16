@@ -769,6 +769,10 @@ public:
 	int m_bIsUndoShoplist;
 	unsigned short m_sShopTarget;
 
+	//Arena Real
+	SPanel* m_pArenaGamePanel;
+	SPanel* m_pArenaGameScorePanel;
+
 public:
 	static RECT m_rectWarning[7];
 	static int m_bPK;

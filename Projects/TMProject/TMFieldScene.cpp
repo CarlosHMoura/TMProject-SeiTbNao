@@ -1502,6 +1502,16 @@ int TMFieldScene::InitializeScene()
 	m_pGridInv = m_pGridInvList[0];
 	m_pGridInv->SetVisible(1);
 
+
+	//Arena Real @SkyDrive 16/08/2022
+	m_pArenaGamePanel = (SPanel*)m_pControlContainer->FindControl(90631u);
+	if(m_pArenaGamePanel)
+		m_pArenaGamePanel->SetVisible(0);
+
+	m_pArenaGameScorePanel = (SPanel*)m_pControlContainer->FindControl(90624u);
+	if(m_pArenaGameScorePanel)
+		m_pArenaGameScorePanel->SetVisible(0);
+
 	m_pQuicInvDelete = (SGridControl*)m_pControlContainer->FindControl(67080);
 	m_pQuicInvDelete->m_eGridType = TMEGRIDTYPE::GRID_DELETE;
 	m_pGridHelm = (SGridControl*)m_pControlContainer->FindControl(65555);
