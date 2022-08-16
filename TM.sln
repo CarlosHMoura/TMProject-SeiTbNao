@@ -15,6 +15,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DBSrv", "Source  W2pp@Globa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TMSrv", "Source  W2pp@Global\Code\TMSrv\TMSrv.vcxproj", "{1729E469-5121-44D6-82E5-48D2381D3098}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFiles", "CommonFiles", "{E6122379-4D48-45B9-9A2C-03413D894687}"
+	ProjectSection(SolutionItems) = preProject
+		CommonFiles\SharedStructs.h = CommonFiles\SharedStructs.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

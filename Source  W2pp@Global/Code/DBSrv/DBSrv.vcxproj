@@ -47,11 +47,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Release W2pp@Global\DBSrv\run</OutDir>
+    <IncludePath>$(SolutionDir)CommonFiles;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Release W2pp@Global\DBSrv\run</OutDir>
     <IntDir>$(SolutionDir)Release W2pp@Global\DBSrv\run</IntDir>
+    <IncludePath>$(SolutionDir)CommonFiles;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

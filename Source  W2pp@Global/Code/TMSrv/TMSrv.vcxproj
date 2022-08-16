@@ -47,12 +47,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Release W2pp@Global\TMSrv\run</OutDir>
+    <IncludePath>$(SolutionDir)CommonFiles;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Release W2pp@Global\TMSrv\run</OutDir>
     <TargetName>TMServer</TargetName>
     <IntDir>$(SolutionDir)Release W2pp@Global\TMSrv\run</IntDir>
+    <IncludePath>$(SolutionDir)CommonFiles;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
