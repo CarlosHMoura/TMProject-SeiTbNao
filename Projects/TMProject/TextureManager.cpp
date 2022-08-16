@@ -27,6 +27,7 @@ TextureManager::TextureManager()
 		m_stUITextureList[nIndex].cAlpha = 78;
 		m_stUITextureList[nIndex].dwLastUsedTime = 0;
 		m_stUITextureList[nIndex].dwShowTime = 0;
+
 	}
 
 	memset(m_UITextureSetList, 0, sizeof(m_UITextureSetList));
@@ -457,30 +458,21 @@ int TextureManager::InitUITextureSetList()
 				&m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nDestX,
 				&m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nDestY);
 
-			//Nova leitura de icones formato 100x100
-			//v46 = 100 * (v42 % 100 % 10);
-			//v47 = 100 * (v42 % 100 / 10);
-			//*(_DWORD*)(v8 + 841) = v46;
-			//*(_DWORD*)(v8 + 845) = v47;
-			//*(_DWORD*)(v8 + 849) = v46 + 100;
-			//*(_DWORD*)(v8 + 853) = v47 + 100;
+
 			if (nSetIndex == 526)
 			{
-				if (CurIcon > 100)
+				if (CurIcon > (100 - 1))
 					CurIcon = 0;
 
-				int nStartX = 100 * (CurIcon % 100 % 10);
-				int nStartY = 100 * (CurIcon % 100 / 10);
-				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartX = nStartX;
-				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartY = nStartY;
-				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nWidth = nStartX + 100;
-				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nHeight = nStartY + 100;
-
+				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartX = 100 * (CurIcon % 100 % 10);
+				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nStartY = 100 * (CurIcon % 100 / 10);
+				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nWidth = 100;
+				m_UITextureSetList[nSetIndex].pTextureCoord[nCount].nHeight = 100;
 				CurIcon++;
 			}
 		}
-		
-		
+
+
 
 
 	}
