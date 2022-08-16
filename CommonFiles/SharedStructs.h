@@ -38,8 +38,6 @@ struct		 MSG_STANDARD
 	int Tick;
 };
 #endif // _WYDCLIENT
-
-#pragma pack(push, 1)
 struct		  MSG_AccountLogin
 {
 	_PCKHEADER;
@@ -51,6 +49,8 @@ struct		  MSG_AccountLogin
 	int  DBNeedSave;
 	int AdapterName[4];
 };
+#pragma pack(push, 1)
+
 #pragma pack(pop)
 
 #endif
