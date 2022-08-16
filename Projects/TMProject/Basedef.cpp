@@ -157,21 +157,21 @@ int BASE_ReadSkillBin()
     char* temp = (char*)g_pSpell;
 
     FILE* fp = fopen(SkillData_Path, "rb");
-
+    int CheckSumValue = 0;
     if (fp != NULL)
     {
         fread(g_pSpell, size, 1, fp);
+        fread(&CheckSumValue, 4u, 1u, fp);
         fclose(fp);
+
+        for (int i = 0; i < size; i++)
+            temp[i] = temp[i] ^ 0x5A;
     }
     else
     {
         MessageBox(NULL, "Can't read SkillData.bin", "ERROR", NULL);
         return FALSE;
     }
-
-    for (int i = 0; i < size; i++)
-        temp[i] = temp[i] ^ 0x5A;
-
     return TRUE;
 }
 
@@ -296,11 +296,24 @@ void BASE_InitEffectString()
 int BASE_InitializeBaseDef()
 {
     int ret = 0;
-	ret = BASE_InitializeServerList() & 1;
-    ret = BASE_ReadSkillBin() & ret;
-    ret = BASE_ReadItemList() & ret;
-    ret = BASE_InitializeAttribute() & ret;
-	return ret;
+    if (1 != BASE_InitializeServerList())
+    {
+        LOG_WRITELOGSTRING("Initialize BASE_InitializeServerList Failed\r\n");
+        return 0;
+    }
+    if (1 != BASE_ReadSkillBin()) {
+        LOG_WRITELOGSTRING("Initialize BASE_ReadSkillBin Failed\r\n");
+        return 0;
+    }
+    if (1 != BASE_ReadItemList()) {
+        LOG_WRITELOGSTRING("Initialize BASE_ReadItemList Failed\r\n");
+        return 0;
+    }
+    if (1 != BASE_InitializeAttribute()) {
+        LOG_WRITELOGSTRING("Initialize BASE_InitializeAttribute Failed\r\n");
+        return 0;
+    }
+    return 1;
 }
 
 void BASE_ReadItemPrice()
