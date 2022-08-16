@@ -301,6 +301,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	{
 		MessageBoxA(m_hWnd, "Initialize Data Failed", "Error", 0);
 		LOG_WRITELOGSTRING("Initialize Data Failed\r\n");
+		LOG_FINALIZELOG();
 		return 0;
 	}
 
