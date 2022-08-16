@@ -1757,5 +1757,28 @@
 2921 mesh\\unicross01.msa
 2922 mesh\\unishield01.msa
 2923 mesh\\unibeaker01.msa
+2924 mesh\\bahawaxe01.msa
+2925 mesh\\bahawbow01.msa
+2926 mesh\\bahawclaw01.msa
+2927 mesh\\bahawspear01.msa
+2928 mesh\\bahawshard01.msa
+2929 mesh\\bahawrod01.msa
+2930 mesh\\bahawstaff01.msa
+2931 mesh\\bahawhammer01.msa
+2932 mesh\\bahawtwohand01.msa
+2933 mesh\\bahawthrow01.msa
+2934 mesh\\bahawshield01.msa
+2935 mesh\\bahawshield02.msa
+2936 mesh\\bstaff01.msa
 
-
+2937 mesh\\aandaxe01.msa
+2938 mesh\\aandbow01.msa
+2939 mesh\\aandclaw01.msa
+2940 mesh\\aandspear01.msa
+2941 mesh\\aandsword01.msa
+2942 mesh\\aandthrow01.msa
+2943 mesh\\aandwand01.msa
+2944 mesh\\aandbwand01.msa
+2945 mesh\\aandbsword01.msa
+2946 mesh\\aandbaxe01.msa
+2947 mesh\\aandshield01.msa

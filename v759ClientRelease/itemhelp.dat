@@ -168,6 +168,96 @@ FFFFFFFF de_cada_tipo_de_aprendizagem.
 FFFF0000 Obs._Usa-se_no_Shaman_em_Azran.
 FFFF0000 Uso_único.
 FFFFFFFF 
+477
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+478
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+479
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+480
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+481
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+482
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+483
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Mais informação em nosso site
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFF0000 
+FFFFFFFF 
+484
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Item_válido_da_promoção_"Feliz_2019".
+FFFFFFFF Realize_a_troca_no_NPC_Virada,_no
+FFFFFFFF Dragão_de_Armia.
+FFFFFFFF 
+FFFF0000 Para_mais_informações,_acesse:
+FFFF0000 kersef.com/r/feliz2019
+FFFFFFFF 
+485
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF Item_válido_da_promoção_"Feliz_2019".
+FFFFFFFF Realize_a_troca_no_NPC_Virada,_no
+FFFFFFFF Dragão_de_Armia.
+FFFFFFFF 
+FFFF0000 Para_mais_informações,_acesse:
+FFFF0000 ersef.com/r/feliz2019
+FFFFFFFF 
 575
 FFFF00FF [Pedra_Lendária]
 FFFFFFFF 
@@ -273,11 +363,11 @@ FFFF00FF [Item_de_QUEST]
 FFFFFFFF 
 FFFFFFFF Item_utilizado_em_diversas_QUESTs.
 FFFFFFFF 
+FFFFFFFF Quando_utilizado_no_Mestre_de_habilidade
+FFFFFFFF retorna_100_pontos_de_cada_atributo_para
+FFFFFFFF ser_redistribuido_(precisa_de_10)
 FFFFFFFF 
-FFFFFFFF 
-FFFFFFFF 
-FFFFFFFF 
-FFFFFFFF 
+FFFFFFFF Mestre_Haby_fica_em_2148_2070
 699
 FFFFFFFF Teleporta_para_o_local_onde_foi 
 FFFFFFFF armazenado_usando_a_Gema_Estelar.
@@ -668,6 +758,26 @@ FFFFFFFF Quando_clicado_com_botão_direito,_esta_opção
 FFFFFFFF será_adicionada_às_Botas_de_mesmo_nível.
 FFFF0000 Uso_para_Botas_equipadas_e_abaixo_de_+9
 FFFF0000 
+3160
+FFFF00FF [Item_Premium]
+FFFFFFFF 
+FFFFFFFF Utilize para alterar
+FFFFFFFF a cor de seu Reino
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 Obs._Uso apenas sem Guilda.
+FFFF0000 
+FFFFFFFF 
+3161
+FFFF00FF [Item_Premium]
+FFFFFFFF 
+FFFFFFFF Utilize para alterar
+FFFFFFFF a cor de seu Reino
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 Obs._Apenas o líder usa.
+FFFF0000 Obs2. uso permitido apenas 
+FFFFFFFF na segunda ou terça-feira.
 3170
 FFFF00FF [Item_Premium]
 FFFFFFFF 
@@ -2458,6 +2568,66 @@ FFFFFFFF e_você_poderá_participar_da_quest
 FFFFFFFF
 FFFF0000 Level_Requerido:_Mortal_321~350
 FFFF0000 É_necessário_1_item_para_cada_entrada
+4052
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Junet as medalhas e troque
+FFFFFFFF por premiações especiais.
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 Premiações disponíveis a
+FFFF0000 partir de 26/09/18.
+4053
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Junet as medalhas e troque
+FFFFFFFF por premiações especiais.
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 Premiações disponíveis a
+FFFF0000 partir de 26/09/18.
+4054
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Junet as medalhas e troque
+FFFFFFFF por premiações especiais.
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 Premiações disponíveis a
+FFFF0000 partir de 26/09/18.
+4055
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Junet as medalhas e troque
+FFFFFFFF por premiações especiais.
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 Premiações disponíveis a
+FFFF0000 partir de 26/09/18.
+4061
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Ovo_de_Páscoa_Amarelo_com_Pintas_Roxas 
+FFFFFFFF Utilizado_apenas_para_Eventos. 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 
+FFFF0000 
+4062
+FFFF00FF 
+FFFFFFFF 
+FFFFFFFF Ovo_de_Páscoa_Azul_com_Pintas_Amarelas 
+FFFFFFFF Utilizado_apenas_para_Eventos. 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFF0000 
+FFFF0000 
 4080
 FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
@@ -2572,7 +2742,7 @@ FFFF0000 Celestial
 FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
 FFFFFFFF Item_da_Quest_Defensor_da_Alma.
-FFFFFFFF 5000_de_experiência_quando_usado.
+FFFFFFFF 15.000_de_experiência_quando_usado.
 FFFFFFFF 
 FFFF0000 Use_o_botão_direito_do_mouse.
 FFFF0000 Limite_de_uso_apenas_em_level
@@ -2582,7 +2752,7 @@ FFFF0000 Não_aplicável_em_personagem_Arch.
 FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
 FFFFFFFF Item_da_Quest_Jardim_do_Deus.
-FFFFFFFF 10.000_de_experiência_quando_usado.
+FFFFFFFF 40.000_de_experiência_quando_usado.
 FFFFFFFF 
 FFFF0000 Use_o_botão_direito_do_mouse.
 FFFF0000 Limite_de_uso_apenas_em_level
@@ -2593,7 +2763,7 @@ FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
 FFFFFFFF Item_da_Quest_Ressurreição_do
 FFFFFFFF Cavaleiro_Negro.
-FFFFFFFF 50.000_de_experiência_quando_usado.
+FFFFFFFF 360.000_de_experiência_quando_usado.
 FFFF0000 Use_o_botão_direito_do_mouse.
 FFFF0000 Limite_de_uso_apenas_em_level
 FFFF0000 191_a_265.
@@ -2602,7 +2772,7 @@ FFFF0000 Não_aplicável_em_personagem_Arch.
 FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
 FFFFFFFF Item_do_Quest_Hidra_Imortal.
-FFFFFFFF 100.000_de_experiência_quando_usado.
+FFFFFFFF 700.000_de_experiência_quando_usado.
 FFFFFFFF 
 FFFF0000 Use_o_botão_direito_do_mouse.
 FFFF0000 Limite_de_uso_apenas_em_level
@@ -2612,7 +2782,7 @@ FFFF0000 Não_aplicável_em_personagem_Arch.
 FFFF00FF [_Item_de_Quest_]
 FFFFFFFF 
 FFFFFFFF Item_da_Quest_Início_da_Infelicidade.
-FFFFFFFF 200.000_de_experiência_quando_usado.
+FFFFFFFF 1.200.000_de_experiência_quando_usado.
 FFFFFFFF 
 FFFF0000 Use_o_botão_direito_do_mouse.
 FFFF0000 Limite_de_uso_apenas_em_level
@@ -2738,6 +2908,16 @@ FFFF0000 -_Impossível_trocar,_vender_ou_descartar.
 FFFF0000 -_Limite_de_30_dias.
 FFFF0000 -_O_item_sumirá_quando_acabar_o_prazo.
 FFFFFFFF   
+4906
+FFFFFFFF 
+FFFFFFFF Este_item_pode_ser_trocado_no
+FFFFFFFF NPC_Epimeteu,_na_cidade_de_Armia.
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 -_Localização_do_NPC_2069,_2063
+FFFF0000 
+FFFF0000 
 4910
 FFFF00FF [Livros_de_10ª_Skill]
 FFFFFFFF 
@@ -3213,10 +3393,10 @@ FFFFFFFF
 FFFFFFFF 
 FFFFFFFF 
 FFFFFFFF 
-FFFFFFFF 
 CC9900FF Envolve_o_personagem_em_um_escudo_de_mana.
 CC9900FF Durante_um_período_de_tempo_o_dano
-CC9900FF recebido_é_descontado_no_MP.
+CC9900FF recebido_é_descontado_metade_da_MP.
+FFFFFFFF Obs:_50%_da_mana_será_consumida_na_ativação.
 CC9900FF 
 5047
 FFFFFFFF 
@@ -3384,10 +3564,10 @@ FFFFFFFF
 FFFFFFFF 
 FFFFFFFF 
 FFFFFFFF 
-FFFFFFFF 
-CC9900FF Evoca_Succubus_para_ajudar_na_batalha.
-CC9900FF Evoca_um_tipo_de_evocação_por_vez.
-CC9900FF
+CC9900FF Evoca um Succubus que cura e adiciona
+CC9900FF perfu/abs aos aliados no grupo.
+CC9900FF Obs: Aprimorado com INT e ataque mágico.
+CC9900FF Passiva: +10% de defesa ao usar escudo.
 5064
 FFFFFFFF 
 FFFFFFFF 
@@ -3847,4 +4027,803 @@ FFFFFFFF renascerá_como_um_Celestial.
 FFFFFFFF 
 FFFFFFFF 
 FFFF0000 Clique_na_pedra_com_o_botão_direito_do_mouse.
+FFFFFFFF
+5602
+FFFFFFFF Item_usado_para_se_tornar_capa_branca.
+FFFF0000 Pode_ser_usado_apenas_se_não_possuir_Guild.
+FFFFFFFF
+FFFF0000 Não_pode_ser_usado_por_Líder_e_Vice_Líder
+FFFF0000 De_Guildas.
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+5400
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_o_personagem_se_tornará
+CC9900FF invulnerável_por_certo_período._Variando_conforme
+CC9900FF os_pontos_que_possuir_na_linhagem_Confiança.
+5401
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+CC9900FF Ao_usar_esta_habilidade,_seu_HP_será_regenerado_em
+CC9900FF 100%.
+5404
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+CC9900FF Ao_usar_duas_armas_de_uma_mão_e_acertar_um_ataque
+CC9900FF Crítico,_seu_HP_irá_se_regenerar_em_quantidade_aleatória.
+CC9900FF Quanto_mais_pontos_nesta_linhagem,_maior_a_quantidade
+CC9900FF de_HP_que_será_regenerada.
+5409
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_a_oitava_Skill_desta_Linhagem_(Tempestade_de_Gelo)
+CC9900FF Há_chance_de_seu_oponente_ser_Congelado,_impedindo-o_de
+CC9900FF se_mover_durante_certo_período.
+5408
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+CC9900FF Aumento_na_chance_de_acertar_ataque_mágico_no_oponente.
+CC9900FF Quanto_mais_pontos_nesta_linhagem,_melhor_serão_as_Skills.
+5413
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_um_Escudo_mágico_de_Gelo_será_criado,
+CC9900FF fornecendo_proteção_e_poder_de_locomoção.
+FFFFFFFF
+5412
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+CC9900FF 
+CC9900FF 
+CC9900FF Ao_usar_a_habilidade_Benção_de_Renascimento,
+CC9900FF ao_renascer,_o_HP_e_MP_serão_recuperados_por_completo.
+5417
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_habilidades_do_atributo_GELO,_há_chance_do_oponente
+CC9900FF ser_mantido_no_local,_impedindo-o_de_se_mover.
+FFFFFFFF
+5416
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_seus_ataques_causarão_maior_dano,
+CC9900FF durante_5_minutos._Porém,_os_mesmos_irão_custar_uma_maior_quantia
+CC9900FF de_MP. 
+5421
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_os_efeitos_positivos_do_oponente_(Buff)
+CC9900FF serão_removidos,_tornando-o_mais_fraco.
+FFFFFFFF
+5420
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+CC9900FF Ao_usar_a_habilidade_CANCELAMENTO_o_oponente_não_poderá_utilizar_poções
+CC9900FF e_também_será_incapacitado_de_mover-se,_contúdo_ainda_poderá_usar
+CC9900FF suas_habilidades.
+5425
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_uma_proteção_de_fogo_será_criada_no_personagem,
+CC9900FF fazendo_com_que_de_tempos_em_tempos_uma_Fera_Flamejante_seja_invocada
+CC9900FF contra_o_oponente_mais_próximo.
+5424
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_um_escudo_é_criado_a_sua_volta,_podendo_se_esquivar
+CC9900FF de_magias.
+CC9900FF Quanto_mais_pontos_nesta_linhagem,_maior_será_a_duração_do_efeito.
+5429
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_esta_habilidade,_um_monstro_Especial_será_Evocado.
+FFFFFFFF
+CC9900FF O_VeridFinal_Possui_Grandes_Poderes.
+5428
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFF0000
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_aprender_essa_habilidade,_sua_habilidade_de_invocar_monstros
+CC9900FF se_tornará_mais_eficaz.
+FFFFFFFF
+5433
+FFFFFFFF
+FFFFFFFF
+FFFF0000 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_aprender_essa_habilidade,_haverá_um_aumento_no_número_de
+CC9900FF Espinhos_Reflexivos,_melhorando_a_taxa_de_dano.
+FFFFFFFF
+5432
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+CC9900FF Após_aprender_essa_habilidade,_o_personagem_
+CC9900FF terá_uma_chance_de_causar_dano_Crítico_maior_(15%).
+5437
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Após_aprender_esta_habilidade,_a_habilidade_Tempestade_de_Raios
+CC9900FF será_aprimorada.
+FFFFFFFF
+5436
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Após_se_Esquivar_de_um_ataque_oponente,_o_seu_próximo_ataque
+CC9900FF receberá_bônus_extra_de_dano.
+CC9900FF Quanto_mais_pontos_nesta_linhagem,_maior_será_o_efeito_aplicado.
+5441
+FFFFFFFF 
+FFFFFFFF 
+FFFF0000 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_usar_essa_habilidade,_o_HP_do_oponente_será_diminuido,
+CC9900FF podendo_parte_deste_HP_ser_drenado_para_seu_personagem.
+FFFFFFFF
+5440
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_aprender_essa_habilidade,_O_poder_de_Alquimia_de_seu_personagem
+CC9900FF será_ampliado,_possibilitando-a_Confecção_de_novas_Jóias.
+FFFFFFFF
+5445
+FFFFFFFF
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_aprender_essa_habilidade,_sempre_que_equipar_uma_GARRA,
+CC9900FF seus_pontos_de_Destreza_e_de_Ataque_irão_receber_um_bônus_significativo.
+FFFFFFFF
+5444
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF 
+FFFFFFFF
+FFFFFFFF 
+CC9900FF Ao_aprender_essa_habilidade,_ao_atacar_o_inimigo_após_usar_a_habilidade_INVISIBILIDADE,
+CC9900FF há_grande_chance_de_paralisar_o_oponente.
+CC9900FF Quanto_mais_pontos_nesta_linhagem,_maior_será_o_efeito_aplicado.
+5500
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_TK_Confiança
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5501
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5502
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5503
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5504
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_TK_Trans 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5505
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5506
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5507
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5508
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_TK_Espada_Mágica 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5509
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5510
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5511
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5512
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_FM_Branca
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5513
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_ 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5514
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5515
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5516
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_FM_Negra 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5517
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5518
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5519
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5520
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_FM_Especial 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5521
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5522
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5523
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5524
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_BM_Elemental
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5525
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5526
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5527
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5528
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_BM_Evocação
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5529
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5530
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5531
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5532
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_BM_Natureza
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5533
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5534
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5535
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5536
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_HT_Sobrevivência
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5537
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5538
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5539
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5540
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_HT_Troca
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5541
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5542
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5543
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5544
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+CC9900FF Linhagem:_HT_Captura
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5545
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5546
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+5547
+FFFFFFFF 
+FFFFFFFF [Livro de Skill]
+FFFFFFFF 
+FFFFFFFF Utilizado_para_aprender_a
+FFFFFFFF nona_skill_de_sua_linhagem
+FFFFFFFF 
+CC9900FF 
+CC9900FF Utilizável_apenas_no_level
+CC9900FF 201_ou_superior_(Celestial/Sub)
+1739
+FFFFFFFF 
+FFFF00FF [Item_de_Evento] 
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Item_utilizado_no_evento_de_dia_dos_namorados.
+FFFFFFFF 
+FFFFFFFF Boa_sorte_em_suas_trocas,_aventureiro.
+FFFFFFFF 
+FFFFFFFF 
+473
+FFFFFFFF 
+FFFF00FF [Item_Premium]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Caixa_Misteriosa_que_contém_ótimos_itens.
+FFFFFFFF 
+FFFF00FF [Clique_com_o_botão_Direito]
+FFFFFFFF 
+FFFFFFFF 
+3210
+FFFFFFFF 
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Item_utilizado_para_testar_sua_sorte_no_evento.
+FFFFFFFF Revolução_Wydiana.
+FFFFFFFF
+FFFF00FF Leve-o_até_o_Dragão_de_Armia
+FFFF0000 [Utilizado_na_PRIMEIRA_Troca]
+3211
+FFFFFFFF 
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Item_utilizado_para_testar_sua_sorte_no_evento.
+FFFFFFFF Revolução_Wydiana.
+FFFFFFFF
+FFFF00FF Leve-o_até_o_Dragão_de_Armia
+FFFF0000 [Utilizado_na_SEGUNDA_Troca]
+3212
+FFFFFFFF 
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Item_utilizado_para_testar_sua_sorte_no_evento.
+FFFFFFFF Revolução_Wydiana.
+FFFFFFFF
+FFFF00FF Leve-o_até_o_Dragão_de_Armia
+FFFF0000 [Utilizado_na_TERCEIRA_Troca]
+3213
+FFFFFFFF 
+FFFF00FF [Item_de_Evento]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Item_utilizado_para_testar_sua_sorte_no_evento.
+FFFFFFFF Revolução_Wydiana.
+FFFFFFFF
+FFFF00FF Leve-o_até_o_Dragão_de_Armia
+FFFF0000 [Utilizado_na_QUARTA_Troca]
+5386
+FFFFFFFF 
+FFFF00FF [Pacote_de_NP]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Clique_com_o_botão_direito_para_abrir.
+FFFFFFFF Pode_demorar_até_2_minutos_para_aparecer
+FFFFFFFF no_NPC_Premium_Neil.
+FFFFFFFF
+FFFFFFFF
+5387
+FFFFFFFF 
+FFFF00FF [Pacote_de_NP]
+FFFFFFFF 
+FFFFFFFF  
+FFFFFFFF Clique_com_o_botão_direito_para_abrir.
+FFFFFFFF Pode_demorar_até_2_minutos_para_aparecer.
+FFFFFFFF no_NPC_Premium_Neil.
 FFFFFFFF
