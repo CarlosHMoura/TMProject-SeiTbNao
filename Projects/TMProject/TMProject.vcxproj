@@ -180,6 +180,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\CommonFiles\SharedStructs.h" />
     <ClInclude Include="AES.h" />
     <ClInclude Include="Base64.h" />
     <ClInclude Include="Basedef.h" />

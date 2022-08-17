@@ -4216,3 +4216,10 @@ ItemCount: 1
 SetIndex: 565
 ItemCount: 1
 353,0,0,500,600,0,0
+
+[Selections]
+SetIndex: 566
+ItemCount: 3
+362,2,2,202,26,0,0
+362,2,30,202,26,0,0
+362,2,228,202,26,0,0
