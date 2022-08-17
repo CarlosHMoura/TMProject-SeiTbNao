@@ -1304,7 +1304,8 @@ void SGridControl::BuyItem(int nCellX, int nCellY)
 			MSG_Buy stBuy{};
 			stBuy.Header.ID = g_pCurrentScene->m_pMyHuman->m_dwID;
 			stBuy.Header.Type = MSG_Buy_Opcode;
-			stBuy.TargetID = m_dwMerchantID;
+			stBuy.TargetID = pScene->m_sShopTarget;
+
 			if (pScene->m_bIsUndoShoplist)
 				stBuy.TargetID = g_pCurrentScene->m_pMyHuman->m_dwID;
 
