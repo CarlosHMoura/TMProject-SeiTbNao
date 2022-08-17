@@ -7883,7 +7883,7 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 		int x = (int)m_pMyHuman->m_vecPosition.x & 0xFFFC;
 		int y = (int)m_pMyHuman->m_vecPosition.y & 0xFFFC;
 
-		for (int ll = 0; ll < 37; ++ll)
+		for (int ll = 0; ll < _countof(g_TeleportTable); ++ll)
 		{
 			if (g_TeleportTable[ll].nX == x && g_TeleportTable[ll].nY == y)
 			{

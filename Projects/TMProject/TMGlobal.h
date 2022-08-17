@@ -197,7 +197,8 @@ const static TMVector3 g_vecItemBillPos[28] =
     {0.76899999f, 0.509f, -1.143f},
 };
 
-const static stTeleportPos g_TeleportTable[37] =
+
+const static stTeleportPos g_TeleportTable[] =
 {
   { 2116, 2100, 700, g_pMessageStringTable[209] },
   { 2480, 1716, 700, g_pMessageStringTable[209] },
@@ -235,7 +236,12 @@ const static stTeleportPos g_TeleportTable[37] =
   { 3648, 3140, 700, g_pMessageStringTable[211] },
   { 2480, 1648, 700, g_pMessageStringTable[301] },
   { 1052, 1708, 0, g_pMessageStringTable[321] },
-  { 1056, 1724, 0, g_pMessageStringTable[485] }
+  { 1056, 1724, 0, g_pMessageStringTable[485] },
+  { 2364, 4072, 0, g_pMessageStringTable[210] },//entrada kefra dentro/fora
+  { 1312, 1900, 0, g_pMessageStringTable[1370] },//entrada kefra fora/dentro ok
+  { 2360, 3892, 0, g_pMessageStringTable[1370] },//entrada boss kefra
+  { 2364, 3892, 0, g_pMessageStringTable[1370] },//entrada boss kefra
+  { 2368, 3892, 0, g_pMessageStringTable[1370] }//entrada boss kefra
 };
 
 static unsigned int g_dwFoodColor[7] =
