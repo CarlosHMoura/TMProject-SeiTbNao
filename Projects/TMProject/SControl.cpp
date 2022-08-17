@@ -2122,6 +2122,7 @@ void SListBoxItem::FrameMove2(stGeomList* pDrawList, TMVector2 ivItemPos, int in
 	if (m_pBackSelection)
 	{
 		m_pBackSelection->m_nWidth = m_pMainListBox->m_nWidth;
+		m_pBackSelection->m_nHeight = m_nHeight - 1.8f;
 		m_pBackSelection->FrameMove2(pDrawList, ivItemPos, inParentLayer, nFlag);
 	}
 }
