@@ -15411,10 +15411,10 @@ void TMFieldScene::InitBoard()
 
 	m_pPotalPanel = (SPanel*)m_pControlContainer->FindControl(12544);
 	m_pPotalList = (SListBox*)m_pControlContainer->FindControl(12545);
-	m_pPotalText = (SText*)m_pControlContainer->FindControl(12549);
-	m_pPotalText1 = (SText*)m_pControlContainer->FindControl(12550);
-	m_pPotalText2 = (SText*)m_pControlContainer->FindControl(12551);
-	m_pPotalText3 = (SText*)m_pControlContainer->FindControl(12552);
+	m_pPotalText = (SText*)m_pControlContainer->FindControl(12551);
+	m_pPotalText1 = (SText*)m_pControlContainer->FindControl(12552);
+	m_pPotalText2 = (SText*)m_pControlContainer->FindControl(12553);
+	m_pPotalText3 = (SText*)m_pControlContainer->FindControl(12560);
 
 	m_pPotalPanel->SetPos(((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pQuestPanel->m_nWidth * 0.5f),
 		((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pQuestPanel->m_nHeight * 0.6f));
