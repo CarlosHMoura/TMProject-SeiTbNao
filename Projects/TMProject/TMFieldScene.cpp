@@ -21737,7 +21737,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 													pFont = new TMFont3(szStr, nTX + 20 - 10 * bViewHalf,
 														(int)(RenderDevice::m_fHeightRatio * 80.0f) +
 														(int)(((float)nTY - (float)(10.0f * RenderDevice::m_fHeightRatio)) -
-															((float)(40 * bViewHalf) * RenderDevice::m_fHeightRatio)),
+															((float)(-50 * bViewHalf) * RenderDevice::m_fHeightRatio)),
 														dwColor,
 														fSize,
 														dwDelay,
@@ -21759,7 +21759,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 													pFont = new TMFont3(szStr, nTX,
 														(int)(RenderDevice::m_fHeightRatio * 80.0f) +
 														(int)(((float)nTY - (float)(20.0f * RenderDevice::m_fHeightRatio)) -
-															((float)(40 * bViewHalf) * RenderDevice::m_fHeightRatio)),
+															((float)(-50 * bViewHalf) * RenderDevice::m_fHeightRatio)),
 														dwColor,
 														fSize,
 														dwDelay,
